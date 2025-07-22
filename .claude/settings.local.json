@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(zip:*)",
+      "Bash(npm run build:*)",
+      "Bash(find:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": false
+}

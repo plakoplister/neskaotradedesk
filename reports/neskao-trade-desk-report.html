@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bureau Trading International Neskao - Rapport Complet</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        /* Première page avec logo */
+        .cover-page {
+            page-break-after: always;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-bottom: 50px;
+        }
+        
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48pt;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .cover-title {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .cover-subtitle {
+            font-size: 18pt;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .cover-date {
+            font-size: 14pt;
+            color: #666;
+        }
+        
+        /* Table des matières */
+        .toc {
+            page-break-after: always;
+            margin-bottom: 40px;
+        }
+        
+        .toc-heading {
+            font-size: 20pt;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+        
+        .toc-item-level-1 {
+            font-weight: bold;
+            font-size: 12pt;
+            margin-top: 15px;
+        }
+        
+        .toc-item-level-2 {
+            margin-left: 20px;
+            font-size: 11pt;
+        }
+        
+        .toc-item-level-3 {
+            margin-left: 40px;
+            font-size: 10pt;
+        }
+        
+        .toc-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #666;
+            margin: 0 10px;
+            height: 1em;
+        }
+        
+        /* Titres */
+        h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            page-break-after: avoid;
+            color: #1a1a1a;
+        }
+        
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+            color: #333;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+            color: #555;
+        }
+        
+        /* Paragraphes */
+        p {
+            text-align: justify;
+            margin-bottom: 12px;
+            text-indent: 0;
+        }
+        
+        /* Listes */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+        
+        /* Tableaux */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+        }
+        
+        th {
+            background-color: #4472C4;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #4472C4;
+        }
+        
+        td {
+            border: 1px solid #d0d0d0;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        
+        /* Encadrés */
+        .highlight-box {
+            background-color: #E7E6E6;
+            border-left: 4px solid #4472C4;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .recommendation-box {
+            background-color: #D4E6F1;
+            border: 2px solid #2874A6;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .alert-box {
+            background-color: #FEE2E2;
+            border-left: 4px solid #DC2626;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background-color: #D1FAE5;
+            border-left: 4px solid #10B981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Images et graphiques */
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .figure-caption {
+            font-style: italic;
+            font-size: 10pt;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Numérotation */
+        .numero {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Page break */
+        .page-break {
+            page-break-after: always;
+        }
+        
+        /* Executive summary */
+        .executive-summary {
+            background-color: #F8F9F9;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #D5D8DC;
+        }
+        
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-box {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #D5D8DC;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2874A6;
+        }
+        
+        .metric-label {
+            font-size: 10pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 9pt;
+            font-weight: bold;
+        }
+        
+        .badge-success {
+            background-color: #D1FAE5;
+            color: #065F46;
+        }
+        
+        .badge-warning {
+            background-color: #FEF3C7;
+            color: #92400E;
+        }
+        
+        .badge-danger {
+            background-color: #FEE2E2;
+            color: #991B1B;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #4472C4;
+            border-radius: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 15px;
+            bottom: -20px;
+            width: 1px;
+            background-color: #4472C4;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page de couverture -->
+    <div class="cover-page">
+        <div class="logo-container">
+            <div class="logo-circle">N</div>
+        </div>
+        <h1 class="cover-title">Bureau Trading International Neskao</h1>
+        <p class="cover-subtitle">Analyse Stratégique et Recommandations</p>
+        <p class="cover-date">Juillet 2025</p>
+    </div>
+
+    <!-- Table des matières -->
+    <div class="toc">
+        <h1 class="toc-heading">Table des matières</h1>
+        
+        <div class="toc-item toc-item-level-1">
+            <span><span class="numero">I.</span> Contexte : Les objectifs de Neskao, le marché du cacao actuel</span>
+            <span class="toc-dots"></span>
+            <span>3</span>
+        </div>
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">A.</span> Neskao : Pionnier africain de la transformation</span>
+            <span class="toc-dots"></span>
+            <span>3</span>
+        </div>
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">B.</span> L'environnement international du cacao</span>
+            <span class="toc-dots"></span>
+            <span>4</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-1">
+            <span><span class="numero">II.</span> Méthodologie</span>
+            <span class="toc-dots"></span>
+            <span>5</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-1">
+            <span><span class="numero">III.</span> Compte rendu</span>
+            <span class="toc-dots"></span>
+            <span>6</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">1.</span> Réglementation</span>
+            <span class="toc-dots"></span>
+            <span>6</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>1.1 Exigences contrats Forward : Contrepartie Internationale</span>
+            <span class="toc-dots"></span>
+            <span>6</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>1.2 Exigences contrats Futurs : Membre ICE ou via Broker</span>
+            <span class="toc-dots"></span>
+            <span>7</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>1.3 Fiscalité</span>
+            <span class="toc-dots"></span>
+            <span>8</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>1.4 Compliance</span>
+            <span class="toc-dots"></span>
+            <span>9</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>1.5 Conclusion Score Réglementation</span>
+            <span class="toc-dots"></span>
+            <span>10</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">2.</span> Mix Produit Volume</span>
+            <span class="toc-dots"></span>
+            <span>11</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>2.1 Prix du cacao - hypothèses prises</span>
+            <span class="toc-dots"></span>
+            <span>11</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>2.2 Mix Produit - hypothèses prises</span>
+            <span class="toc-dots"></span>
+            <span>12</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>2.3 Pricing et Marge - hypothèses prises</span>
+            <span class="toc-dots"></span>
+            <span>13</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>2.4 Récapitulatif Volume, CA et Marges brutes</span>
+            <span class="toc-dots"></span>
+            <span>14</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">3.</span> Structure de Financement</span>
+            <span class="toc-dots"></span>
+            <span>15</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>3.1 Hypothèses par localité</span>
+            <span class="toc-dots"></span>
+            <span>15</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>3.2 Récapitulatif Financement par localité</span>
+            <span class="toc-dots"></span>
+            <span>16</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>3.3 Scoring</span>
+            <span class="toc-dots"></span>
+            <span>17</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">4.</span> SG&A</span>
+            <span class="toc-dots"></span>
+            <span>18</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>4.1 Hypothèses par localité</span>
+            <span class="toc-dots"></span>
+            <span>18</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>4.2 Récapitulatif SG&A par localité</span>
+            <span class="toc-dots"></span>
+            <span>19</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">5.</span> Rentabilité</span>
+            <span class="toc-dots"></span>
+            <span>20</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>5.1 Tableau détaillé par localité</span>
+            <span class="toc-dots"></span>
+            <span>20</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>5.2 Récapitulatif</span>
+            <span class="toc-dots"></span>
+            <span>21</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">6.</span> Impact Social</span>
+            <span class="toc-dots"></span>
+            <span>22</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>6.1 Hypothèses impacts sociaux</span>
+            <span class="toc-dots"></span>
+            <span>22</span>
+        </div>
+        <div class="toc-item toc-item-level-3">
+            <span>6.2 Récapitulatif par localité avec score</span>
+            <span class="toc-dots"></span>
+            <span>23</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">7.</span> Analyse Décisionnelle</span>
+            <span class="toc-dots"></span>
+            <span>24</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-2">
+            <span><span class="numero">8.</span> Risques et Planning d'Implémentation</span>
+            <span class="toc-dots"></span>
+            <span>25</span>
+        </div>
+        
+        <div class="toc-item toc-item-level-1">
+            <span><span class="numero">IV.</span> Annexes</span>
+            <span class="toc-dots"></span>
+            <span>27</span>
+        </div>
+    </div>
+
+    <!-- Synthèse Exécutive -->
+    <div class="executive-summary">
+        <h1 style="text-align: center; margin-top: 0;">Synthèse Exécutive</h1>
+        
+        <div class="recommendation-box">
+            <h3 style="margin-top: 0;">Recommandation principale</h3>
+            <p><strong>Établir le bureau de trading international à Paris avec un capital initial de 10M USD</strong></p>
+        </div>
+        
+        <div class="key-metrics">
+            <div class="metric-box">
+                <div class="metric-value">7.87/10</div>
+                <div class="metric-label">Score global</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">171.5%</div>
+                <div class="metric-label">ROI sur 3 ans</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">+0.52 M€</div>
+                <div class="metric-label">EBITDA An 1</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">8.5/10</div>
+                <div class="metric-label">Impact social</div>
+            </div>
+        </div>
+        
+        <h3>Points clés de l'analyse</h3>
+        <ul>
+            <li>12 localisations analysées selon 5 critères pondérés : Impact Social (30%), Cash Management (30%), Réglementation (15%), ROI (15%) et Financement DFI (10%)</li>
+            <li>Paris obtient le meilleur score global grâce à l'équilibre entre rentabilité et impact social</li>
+            <li>Accès optimal aux financements développement (AFD/Proparco)</li>
+            <li>Convention fiscale excellente avec la Côte d'Ivoire</li>
+            <li>Rentabilité positive dès la première année d'exploitation</li>
+            <li>Volume cible de 227M€ de trading international en 3 ans</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Contenu principal -->
+    <h1><span class="numero">I.</span> Contexte : Les objectifs de Neskao, le marché du cacao actuel</h1>
+    
+    <h2><span class="numero">A.</span> Neskao : Pionnier africain de la transformation du cacao</h2>
+    
+    <div class="highlight-box">
+        <p><strong>Une Innovation Entrepreneuriale Unique</strong></p>
+        <p>Fondée en septembre 2013, Neskao est <strong>la première entreprise africaine</strong> à transformer les fèves de cacao hors normes en produits semi-finis de qualité. Cette société familiale dirigée par Michel André Tournaire a développé un modèle d'affaires révolutionnaire qui valorise les déchets de la filière cacao tout en créant de la valeur économique et sociale.</p>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Indicateur</th>
+            <th>Valeur</th>
+            <th>Impact</th>
+        </tr>
+        <tr>
+            <td>Année de création</td>
+            <td>2013</td>
+            <td>1ère entreprise africaine sur ce segment</td>
+        </tr>
+        <tr>
+            <td>Emplois directs</td>
+            <td>150+</td>
+            <td>8,000 emplois indirects</td>
+        </tr>
+        <tr>
+            <td>Capacité de production</td>
+            <td>32,000 tonnes/an</td>
+            <td>Pâte: 12,000T, Beurre: 5,000T, Tourteau: 15,000T</td>
+        </tr>
+        <tr>
+            <td>Certification</td>
+            <td>FSSC 22000 V.5</td>
+            <td>Obtenue en 2021</td>
+        </tr>
+        <tr>
+            <td>Localisation</td>
+            <td>Zone industrielle de Vridi</td>
+            <td>Abidjan, Côte d'Ivoire</td>
+        </tr>
+    </table>
+    
+    <h3>Un Modèle d'Affaires Innovant</h3>
+    <p>Neskao se distingue par sa spécialisation unique : la transformation de <strong>fèves hors normes</strong> (brisures, fèves noires, plates ou moisies) et de déchets de masse de cacao en produits de qualité. Cette approche pionnière permet de valoriser des matériaux qui seraient autrement interdits à l'exportation ou considérés comme des déchets.</p>
+    
+    <h3>L'Ambition : Du Local à l'International</h3>
+    <p>Fort de son expertise unique dans la valorisation des sous-produits du cacao, Neskao ambitionne maintenant de créer un <strong>bureau de trading international</strong>. Cette évolution stratégique vise à capturer davantage de valeur sur la chaîne mondiale du cacao en passant d'un modèle de transformation locale à une présence active sur les marchés internationaux des matières premières.</p>
+    
+    <h2><span class="numero">B.</span> L'environnement international du cacao</h2>
+    
+    <h3>Marché du Cacao 2025-2026</h3>
+    <table>
+        <tr>
+            <th>Paramètre</th>
+            <th>Valeur</th>
+            <th>Unité</th>
+        </tr>
+        <tr>
+            <td>Production CI estimée</td>
+            <td>1,500,000</td>
+            <td>tonnes/an</td>
+        </tr>
+        <tr>
+            <td>Prix moyen CAZ25</td>
+            <td>6,200</td>
+            <td>GBP/tonne</td>
+        </tr>
+        <tr>
+            <td>Récolte principale (Oct-Déc)</td>
+            <td>900,000</td>
+            <td>tonnes</td>
+        </tr>
+        <tr>
+            <td>Récolte intermédiaire (Jan-Mar)</td>
+            <td>600,000</td>
+            <td>tonnes</td>
+        </tr>
+    </table>
+    
+    <h3>Évolutions Majeures du Marché International</h3>
+    <ul>
+        <li><strong>📈 Volatilité Accrue des Prix :</strong> Les marchés du cacao connaissent une volatilité historique, nécessitant des outils sophistiqués de gestion des risques (forwards et futures).</li>
+        <li><strong>🌱 Réglementation EUDR :</strong> L'Union Européenne impose de nouvelles exigences de traçabilité et durabilité, créant des opportunités pour les acteurs conformes.</li>
+        <li><strong>💹 Financiarisation du Marché :</strong> Les instruments financiers (ICE Futures) deviennent essentiels pour la compétitivité et la gestion optimale des flux physiques.</li>
+        <li><strong>🤝 Consolidation des Acteurs :</strong> Les traders internationaux se consolident, créant une fenêtre d'opportunité pour de nouveaux entrants africains bien positionnés.</li>
+    </ul>
+    
+    <div class="success-box">
+        <h3>La Convergence Stratégique</h3>
+        <p><strong>Pourquoi un Bureau de Trading International Maintenant ?</strong></p>
+        <p>La convergence entre l'expertise unique de Neskao, les évolutions réglementaires (EUDR), la volatilité des marchés et les opportunités de financement développement créent une fenêtre d'opportunité unique pour établir un bureau de trading international.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h1><span class="numero">II.</span> Méthodologie</h1>
+    
+    <p>Cette étude décisionnelle utilise une approche multi-critères pour identifier la localisation optimale du bureau de trading international de Neskao. L'analyse porte sur 12 localisations potentielles évaluées selon 5 critères pondérés.</p>
+    
+    <h2>Critères d'Évaluation et Pondération</h2>
+    
+    <table>
+        <tr>
+            <th>Critère</th>
+            <th>Pondération</th>
+            <th>Justification</th>
+        </tr>
+        <tr>
+            <td><strong>Impact Social</strong></td>
+            <td>30%</td>
+            <td>Alignement avec la mission de Neskao de créer de la valeur en Côte d'Ivoire</td>
+        </tr>
+        <tr>
+            <td><strong>Cash Management</strong></td>
+            <td>30%</td>
+            <td>Criticité du financement pour les activités de trading de matières premières</td>
+        </tr>
+        <tr>
+            <td><strong>Réglementation</strong></td>
+            <td>15%</td>
+            <td>Conformité indispensable pour opérer sur les marchés internationaux</td>
+        </tr>
+        <tr>
+            <td><strong>ROI</strong></td>
+            <td>15%</td>
+            <td>Viabilité financière du projet</td>
+        </tr>
+        <tr>
+            <td><strong>Financement DFI</strong></td>
+            <td>10%</td>
+            <td>Accès aux financements développement pour l'impact social</td>
+        </tr>
+    </table>
+    
+    <h2>Localisations Analysées</h2>
+    
+    <div class="highlight-box">
+        <h3>Europe (6 villes)</h3>
+        <p>Paris 🇫🇷, Genève 🇨🇭, Amsterdam 🇳🇱, Londres 🇬🇧, Hambourg 🇩🇪, Andorre 🇦🇩</p>
+        
+        <h3>Afrique/Moyen-Orient (5 villes)</h3>
+        <p>Maurice 🇲🇺, Maroc CFC 🇲🇦, Dubai 🇦🇪, Tel Aviv 🇮🇱</p>
+        
+        <h3>Asie (1 ville)</h3>
+        <p>Singapour 🇸🇬</p>
+    </div>
+    
+    <h2>Sources de Données</h2>
+    <ul>
+        <li>Analyse réglementaire détaillée de chaque juridiction</li>
+        <li>Modélisation financière sur 3 ans avec hypothèses conservatrices</li>
+        <li>Benchmarking des coûts opérationnels (SG&A) par localité</li>
+        <li>Évaluation de l'écosystème et des liens avec la Côte d'Ivoire</li>
+        <li>Scoring normalisé sur base 10 pour chaque critère</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <h1><span class="numero">III.</span> Compte rendu</h1>
+    
+    <h2><span class="numero">1.</span> Réglementation</h2>
+    
+    <h3>1.1 Exigences contrats Forward : Contrepartie Internationale Exigences CCC</h3>
+    
+    <p>Le Conseil du Café-Cacao (CCC) de Côte d'Ivoire impose des conditions strictes pour l'obtention d'une licence d'exportation et la négociation de contrats forward :</p>
+    
+    <table>
+        <tr>
+            <th>Critère</th>
+            <th>Exigence CCC</th>
+            <th>Statut Neskao</th>
+            <th>Action requise</th>
+        </tr>
+        <tr>
+            <td>Capital minimum</td>
+            <td>5M USD (10M recommandé)</td>
+            <td><span class="badge badge-warning">À mobiliser</span></td>
+            <td>Levée de fonds ou apport actionnaires</td>
+        </tr>
+        <tr>
+            <td>Garantie bancaire</td>
+            <td>Ligne confirmée banque 1er rang</td>
+            <td><span class="badge badge-warning">À négocier</span></td>
+            <td>Négociation avec banques internationales</td>
+        </tr>
+        <tr>
+            <td>Présence locale CI</td>
+            <td>Bureau ou représentant</td>
+            <td><span class="badge badge-success">✓ Acquis</span></td>
+            <td>Infrastructure existante à Vridi</td>
+        </tr>
+        <tr>
+            <td>Track record</td>
+            <td>3 ans minimum</td>
+            <td><span class="badge badge-success">✓ Acquis</span></td>
+            <td>10+ ans d'expérience</td>
+        </tr>
+        <tr>
+            <td>Compliance</td>
+            <td>EUDR, durabilité</td>
+            <td><span class="badge badge-warning">En cours</span></td>
+            <td>Mise en conformité EUDR</td>
+        </tr>
+    </table>
+    
+    <div class="highlight-box">
+        <h4>Processus d'agrément CCC (2-3 mois)</h4>
+        <ol>
+            <li><strong>Dossier de candidature :</strong> Statuts, états financiers audités, garanties bancaires</li>
+            <li><strong>Négociation contrats forward :</strong> Volumes et prix avec le CCC</li>
+            <li><strong>Préfinancement (T-60j) :</strong> Mobilisation ligne de crédit, émission LC bancaire</li>
+            <li><strong>Livraison :</strong> Réception Abidjan/San Pedro, émission B/L, certificats qualité</li>
+        </ol>
+    </div>
+    
+    <h3>1.2 Exigences contrats Futurs : Membre ICE ou via Broker</h3>
+    
+    <p>L'accès aux marchés futures du cacao (ICE Futures Europe) peut se faire selon deux modalités :</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="highlight-box">
+            <h4>Option 1 : Membre ICE</h4>
+            <p><strong>Pour volumes importants (>50,000T/an)</strong></p>
+            <ul>
+                <li>Capital réglementaire : 730K EUR minimum</li>
+                <li>Adhésion ICE : 50K USD/an</li>
+                <li>Systèmes : WebICE ou API directe</li>
+                <li>Personnel : Compliance officer agréé FCA/AMF</li>
+            </ul>
+        </div>
+        
+        <div class="success-box">
+            <h4>Option 2 : Via Broker (Recommandé)</h4>
+            <p><strong>Pour démarrer l'activité</strong></p>
+            <ul>
+                <li>Compte chez broker régulé (StoneX, Marex, ADM)</li>
+                <li>Dépôt initial : 250K-500K USD</li>
+                <li>Commission : 5-15 USD/contrat</li>
+                <li>Accès plateforme : CQG, TT, ou propriétaire</li>
+            </ul>
+        </div>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Type de marge ICE</th>
+            <th>Montant/contrat</th>
+            <th>Par tonne</th>
+            <th>Pour 1,500T</th>
+        </tr>
+        <tr>
+            <td>Initial Margin</td>
+            <td>7,317.94 EUR</td>
+            <td>731.79 EUR</td>
+            <td>1,097,691 EUR</td>
+        </tr>
+        <tr>
+            <td>Maintenance Margin</td>
+            <td>3,500 EUR</td>
+            <td>350 EUR</td>
+            <td>525,000 EUR</td>
+        </tr>
+        <tr>
+            <td>Buffer sécurité (+50%)</td>
+            <td>-</td>
+            <td>-</td>
+            <td>548,845 EUR</td>
+        </tr>
+        <tr style="font-weight: bold; background-color: #E7E6E6;">
+            <td>Total requis</td>
+            <td>-</td>
+            <td>-</td>
+            <td>2,171,536 EUR</td>
+        </tr>
+    </table>
+    
+    <div class="alert-box">
+        <p><strong>⚠️ Alerte volatilité :</strong> En cas de mouvement de marché de +33% (6,000 → 8,000 £/T), les besoins de financement peuvent atteindre 47M USD additionnels.</p>
+    </div>
+    
+    <h3>1.3 Fiscalité</h3>
+    
+    <p>L'analyse fiscale révèle des disparités importantes entre les juridictions, avec un focus particulier sur les conventions fiscales avec la Côte d'Ivoire :</p>
+    
+    <table>
+        <tr>
+            <th>Localisation</th>
+            <th>Taux IS</th>
+            <th>Convention CI</th>
+            <th>Prix Transfert</th>
+            <th>Avantages spéciaux</th>
+        </tr>
+        <tr>
+            <td><strong>Paris 🇫🇷</strong></td>
+            <td>25% + CVAE</td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td>Élimination double imposition</td>
+        </tr>
+        <tr>
+            <td>Genève 🇨🇭</td>
+            <td>15.15%</td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td>Statut auxiliaire possible</td>
+        </tr>
+        <tr>
+            <td>Amsterdam 🇳🇱</td>
+            <td>25.8%</td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td>Innovation box 9%</td>
+        </tr>
+        <tr>
+            <td>Londres 🇬🇧</td>
+            <td>25%</td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td><span class="badge badge-danger">NON</span></td>
+            <td>Centre mondial trading</td>
+        </tr>
+        <tr>
+            <td>Singapour 🇸🇬</td>
+            <td>5-10% GTP</td>
+            <td><span class="badge badge-danger">NON</span></td>
+            <td><span class="badge badge-success">OUI</span></td>
+            <td>Global Trader Programme</td>
+        </tr>
+        <tr>
+            <td>Dubai 🇦🇪</td>
+            <td>0%</td>
+            <td><span class="badge badge-danger">NON</span></td>
+            <td><span class="badge badge-danger">NON</span></td>
+            <td>Zone franche DMCC</td>
+        </tr>
+    </table>
+    
+    <h3>1.4 Compliance</h3>
+    
+    <div class="alert-box">
+        <h4>🚨 EUDR (EU Deforestation Regulation)</h4>
+        <p><strong>Deadline :</strong> 30 décembre 2025 → reportée à 2026</p>
+        <ul>
+            <li>Traçabilité GPS obligatoire de toutes les parcelles</li>
+            <li>Due diligence renforcée sur la chaîne d'approvisionnement</li>
+            <li>Reporting annuel obligatoire</li>
+            <li>Pénalités : jusqu'à 4% du CA EU</li>
+        </ul>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="highlight-box">
+            <h4>MiFID II (Europe)</h4>
+            <ul>
+                <li>Reporting transactions temps réel</li>
+                <li>Best execution policy</li>
+                <li>Enregistrement communications</li>
+                <li>Formation continue traders</li>
+            </ul>
+        </div>
+        
+        <div class="highlight-box">
+            <h4>LCB-FT (Toutes juridictions)</h4>
+            <ul>
+                <li>KYC/AML procédures</li>
+                <li>Screening sanctions</li>
+                <li>Transaction monitoring</li>
+                <li>Suspicious Activity Reports</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>1.5 Conclusion Score Réglementation</h3>
+    
+    <table>
+        <tr>
+            <th>Localisation</th>
+            <th>Score /10</th>
+            <th>Justification</th>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>Paris, Genève, Amsterdam, Hambourg</td>
+            <td><strong>10/10</strong></td>
+            <td>Convention CI + Trading autorisé + Standards UE</td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td>Londres, Singapour</td>
+            <td><strong>8/10</strong></td>
+            <td>Manque convention CI ou complexité post-Brexit</td>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td>Maroc CFC</td>
+            <td><strong>3/10</strong></td>
+            <td>Restrictions changes + Margin calls T+3</td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">2.</span> Mix Produit Volume</h2>
+    
+    <h3>2.1 Prix du cacao - hypothèses prises</h3>
+    
+    <table>
+        <tr>
+            <th>Paramètre</th>
+            <th>Valeur</th>
+            <th>Source</th>
+        </tr>
+        <tr>
+            <td>CAZ25 (Londres)</td>
+            <td>6,200 GBP/T</td>
+            <td>ICE Futures Europe</td>
+        </tr>
+        <tr>
+            <td>CAH26 (Londres)</td>
+            <td>5,800 GBP/T</td>
+            <td>ICE Futures Europe</td>
+        </tr>
+        <tr>
+            <td>FOREX EUR/GBP</td>
+            <td>1.15461</td>
+            <td>BCE</td>
+        </tr>
+        <tr>
+            <td>LID (différentiel CI)</td>
+            <td>400 EUR</td>
+            <td>Historique CCC</td>
+        </tr>
+        <tr>
+            <td>Prix moyen retenu</td>
+            <td>6,973.84 EUR/T</td>
+            <td>Calcul pondéré</td>
+        </tr>
+    </table>
+    
+    <h3>2.2 Mix Produit - hypothèses prises</h3>
+    
+    <div class="highlight-box">
+        <h4>Rendements de Transformation</h4>
+        <ul>
+            <li>Fèves → Masse : 81%</li>
+            <li>Masse → Beurre : 51%</li>
+            <li>Masse → Poudre : 47%</li>
+            <li>Perte process : 2%</li>
+        </ul>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Produit</th>
+            <th>Répartition Production CI</th>
+            <th>Export vs Local</th>
+            <th>Trading Desk</th>
+        </tr>
+        <tr>
+            <td>Masse de cacao</td>
+            <td>25% vente directe, 75% transformation</td>
+            <td>50/50</td>
+            <td>100% du volume export</td>
+        </tr>
+        <tr>
+            <td>Beurre standard</td>
+            <td>60% de la masse transformée</td>
+            <td>80/20</td>
+            <td>100% du volume export</td>
+        </tr>
+        <tr>
+            <td>Beurre premium</td>
+            <td>10% de la masse transformée</td>
+            <td>100/0</td>
+            <td>100% du volume export</td>
+        </tr>
+        <tr>
+            <td>Poudre naturelle</td>
+            <td>20% de la masse transformée</td>
+            <td>70/30</td>
+            <td>100% du volume export</td>
+        </tr>
+        <tr>
+            <td>Poudre alcalinisée</td>
+            <td>10% de la masse transformée</td>
+            <td>100/0</td>
+            <td>100% du volume export</td>
+        </tr>
+    </table>
+    
+    <h3>2.3 Pricing et Marge - hypothèses prises</h3>
+    
+    <table>
+        <tr>
+            <th>Produit</th>
+            <th>Prix Cost Plus</th>
+            <th>Prix Market</th>
+            <th>Prix Hybride (70/30)</th>
+            <th>Frais Trade</th>
+            <th>Prix Final NESKAO</th>
+        </tr>
+        <tr>
+            <td>Masse de cacao</td>
+            <td>8,336 EUR/T</td>
+            <td>10,147 EUR/T</td>
+            <td>8,879 EUR/T</td>
+            <td>150 EUR/T</td>
+            <td><strong>9,029 EUR/T</strong></td>
+        </tr>
+        <tr>
+            <td>Beurre standard</td>
+            <td>16,139 EUR/T</td>
+            <td>14,729 EUR/T</td>
+            <td>15,716 EUR/T</td>
+            <td>200 EUR/T</td>
+            <td><strong>15,916 EUR/T</strong></td>
+        </tr>
+        <tr>
+            <td>Beurre premium</td>
+            <td>17,753 EUR/T</td>
+            <td>16,202 EUR/T</td>
+            <td>17,288 EUR/T</td>
+            <td>250 EUR/T</td>
+            <td><strong>17,538 EUR/T</strong></td>
+        </tr>
+        <tr>
+            <td>Poudre naturelle</td>
+            <td>1,852 EUR/T</td>
+            <td>10,147 EUR/T</td>
+            <td>4,340 EUR/T</td>
+            <td>180 EUR/T</td>
+            <td><strong>4,520 EUR/T</strong></td>
+        </tr>
+        <tr>
+            <td>Poudre alcalinisée</td>
+            <td>2,058 EUR/T</td>
+            <td>10,147 EUR/T</td>
+            <td>4,485 EUR/T</td>
+            <td>180 EUR/T</td>
+            <td><strong>4,665 EUR/T</strong></td>
+        </tr>
+    </table>
+    
+    <h3>2.4 Récapitulatif Volume, CA et Marges brutes</h3>
+    
+    <table>
+        <tr>
+            <th>Métrique</th>
+            <th>An 1</th>
+            <th>An 2</th>
+            <th>An 3</th>
+            <th>Total 3 ans</th>
+        </tr>
+        <tr>
+            <td><strong>Volume total (tonnes)</strong></td>
+            <td>6,490</td>
+            <td>13,618</td>
+            <td>22,245</td>
+            <td>42,353</td>
+        </tr>
+        <tr>
+            <td><strong>CA (M€)</strong></td>
+            <td>54.18</td>
+            <td>132.57</td>
+            <td>227.58</td>
+            <td>414.33</td>
+        </tr>
+        <tr>
+            <td><strong>Marge brute (M€)</strong></td>
+            <td>1.78</td>
+            <td>4.25</td>
+            <td>11.55</td>
+            <td>17.58</td>
+        </tr>
+        <tr>
+            <td><strong>Marge (%)</strong></td>
+            <td>3.28%</td>
+            <td>3.21%</td>
+            <td>5.07%</td>
+            <td>4.24%</td>
+        </tr>
+    </table>
+    
+    <div class="highlight-box">
+        <h4>Répartition du volume An 3 par produit</h4>
+        <ul>
+            <li>Masse : 4,536 tonnes (20%)</li>
+            <li>Beurre standard : 11,123 tonnes (50%)</li>
+            <li>Beurre premium : 1,335 tonnes (6%)</li>
+            <li>Poudre naturelle : 3,471 tonnes (16%)</li>
+            <li>Poudre alcalinisée : 1,780 tonnes (8%)</li>
+        </ul>
+    </div>
+    
+    <div class="success-box">
+        <p><strong>Points clés :</strong></p>
+        <ul>
+            <li>Montée en puissance progressive avec multiplication par 3.4x des volumes entre An 1 et An 3</li>
+            <li>Amélioration de la marge de 3.28% à 5.07% grâce aux économies d'échelle</li>
+            <li>Mix produit équilibré favorisant les produits à plus forte valeur ajoutée (beurre premium)</li>
+            <li>100% des volumes export captés par le Trading Desk</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">3.</span> Structure de Financement</h2>
+    
+    <h3>3.1 Hypothèses par localité</h3>
+    
+    <h4>Forward Trading</h4>
+    <table>
+        <tr>
+            <th>Paramètre</th>
+            <th>Europe</th>
+            <th>Afrique</th>
+            <th>Asie</th>
+        </tr>
+        <tr>
+            <td>Cash Cycle</td>
+            <td>60 jours</td>
+            <td>72 jours</td>
+            <td>65 jours</td>
+        </tr>
+        <tr>
+            <td>Buffer volatilité</td>
+            <td>30%</td>
+            <td>40%</td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td>Ratio Equity/Dette</td>
+            <td>10-25% / 75-90%</td>
+            <td>20-30% / 70-80%</td>
+            <td>15-20% / 80-85%</td>
+        </tr>
+        <tr>
+            <td>Taux financement</td>
+            <td>EURIBOR + 2-3%</td>
+            <td>LIBOR + 3-4%</td>
+            <td>SOFR + 2.5%</td>
+        </tr>
+    </table>
+    
+    <h4>Futures Trading</h4>
+    <table>
+        <tr>
+            <th>Paramètre</th>
+            <th>Toutes localisations</th>
+        </tr>
+        <tr>
+            <td>Initial Margin ICE</td>
+            <td>731.79 EUR/tonne</td>
+        </tr>
+        <tr>
+            <td>Buffer margin calls</td>
+            <td>50%</td>
+        </tr>
+        <tr>
+            <td>Ratio Equity/Dette</td>
+            <td>20-25% / 75-80%</td>
+        </tr>
+        <tr>
+            <td>Allocation hedging</td>
+            <td>5% An1 → 45% An3</td>
+        </tr>
+        <tr>
+            <td>Allocation spéculation</td>
+            <td>1% An1 → 5% An3</td>
+        </tr>
+    </table>
+    
+    <h3>3.2 Récapitulatif Financement par localité</h3>
+    
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Capital Initial</th>
+            <th>Cash Forward</th>
+            <th>Cash Futures</th>
+            <th>Total An 1</th>
+            <th>Ratio D/E</th>
+        </tr>
+        <tr>
+            <td><strong>Paris</strong></td>
+            <td>1.89 M€</td>
+            <td>8.52 M€</td>
+            <td>5.20 M€</td>
+            <td><strong>13.73 M€</strong></td>
+            <td>6.25x</td>
+        </tr>
+        <tr>
+            <td>Genève</td>
+            <td>1.78 M€</td>
+            <td>7.44 M€</td>
+            <td>5.20 M€</td>
+            <td>12.64 M€</td>
+            <td>6.08x</td>
+        </tr>
+        <tr>
+            <td>Amsterdam</td>
+            <td>1.74 M€</td>
+            <td>7.26 M€</td>
+            <td>5.07 M€</td>
+            <td>12.33 M€</td>
+            <td>6.09x</td>
+        </tr>
+        <tr>
+            <td>Londres</td>
+            <td>2.00 M€</td>
+            <td>6.70 M€</td>
+            <td>4.98 M€</td>
+            <td>11.67 M€</td>
+            <td>4.84x</td>
+        </tr>
+        <tr>
+            <td>Singapour</td>
+            <td>1.61 M€</td>
+            <td>6.15 M€</td>
+            <td>4.98 M€</td>
+            <td>11.12 M€</td>
+            <td>5.91x</td>
+        </tr>
+    </table>
+    
+    <h3>3.3 Scoring</h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+            <h4>Score Cash Management (/10)</h4>
+            <table>
+                <tr>
+                    <th>Rang</th>
+                    <th>Ville</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Singapour</td>
+                    <td>7.16</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Amsterdam</td>
+                    <td>6.93</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Genève</td>
+                    <td>6.85</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hambourg</td>
+                    <td>6.74</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Paris</td>
+                    <td>6.66</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <h4>Score Accès DFI (/10)</h4>
+            <table>
+                <tr>
+                    <th>Rang</th>
+                    <th>Ville</th>
+                    <th>Score</th>
+                    <th>Institutions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Paris</td>
+                    <td>10</td>
+                    <td>AFD/Proparco</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Genève</td>
+                    <td>10</td>
+                    <td>Hub DFI mondial</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Amsterdam</td>
+                    <td>9</td>
+                    <td>FMO</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Londres</td>
+                    <td>8</td>
+                    <td>BII/CDC</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Singapour</td>
+                    <td>8</td>
+                    <td>IFC Asie</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="alert-box">
+        <p><strong>⚠️ Alerte financement :</strong> Les besoins en capital de roulement peuvent doubler en cas de stress de marché. Une ligne de backup de 15M€ minimum est recommandée.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">4.</span> SG&A (Selling, General & Administrative)</h2>
+    
+    <h3>4.1 Hypothèses par localité</h3>
+    
+    <table>
+        <tr>
+            <th>Catégorie</th>
+            <th>Paris</th>
+            <th>Genève</th>
+            <th>Amsterdam</th>
+            <th>Londres</th>
+        </tr>
+        <tr>
+            <td><strong>PERSONNEL</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Head of Trading</td>
+            <td>250K€</td>
+            <td>350K€</td>
+            <td>280K€</td>
+            <td>350K€</td>
+        </tr>
+        <tr>
+            <td>Traders (2)</td>
+            <td>300K€</td>
+            <td>400K€</td>
+            <td>340K€</td>
+            <td>420K€</td>
+        </tr>
+        <tr>
+            <td>Risk/Compliance</td>
+            <td>120K€</td>
+            <td>150K€</td>
+            <td>130K€</td>
+            <td>160K€</td>
+        </tr>
+        <tr>
+            <td>Support (3-4)</td>
+            <td>140K€</td>
+            <td>180K€</td>
+            <td>160K€</td>
+            <td>200K€</td>
+        </tr>
+        <tr style="background-color: #E7E6E6;">
+            <td><strong>Total Personnel</strong></td>
+            <td><strong>810K€</strong></td>
+            <td><strong>1,080K€</strong></td>
+            <td><strong>910K€</strong></td>
+            <td><strong>1,130K€</strong></td>
+        </tr>
+        <tr>
+            <td><strong>BUREAUX</strong></td>
+            <td>98K€</td>
+            <td>171K€</td>
+            <td>128K€</td>
+            <td>195K€</td>
+        </tr>
+        <tr>
+            <td><strong>IT & SYSTÈMES</strong></td>
+            <td>194K€</td>
+            <td>194K€</td>
+            <td>194K€</td>
+            <td>208K€</td>
+        </tr>
+        <tr>
+            <td><strong>COMPLIANCE</strong></td>
+            <td>124K€</td>
+            <td>142K€</td>
+            <td>124K€</td>
+            <td>156K€</td>
+        </tr>
+        <tr>
+            <td><strong>AUTRES</strong></td>
+            <td>64K€</td>
+            <td>86K€</td>
+            <td>82K€</td>
+            <td>98K€</td>
+        </tr>
+    </table>
+    
+    <h3>4.2 Récapitulatif SG&A par localité</h3>
+    
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>An 1 (M€)</th>
+            <th>An 2 (M€)</th>
+            <th>An 3 (M€)</th>
+            <th>Total 3 ans</th>
+            <th>€/tonne An3</th>
+            <th>Ranking</th>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td><strong>Paris</strong></td>
+            <td>1.29</td>
+            <td>1.22</td>
+            <td>1.48</td>
+            <td><strong>3.99 M€</strong></td>
+            <td>60</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Amsterdam</td>
+            <td>1.34</td>
+            <td>1.32</td>
+            <td>1.70</td>
+            <td>4.35 M€</td>
+            <td>69</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Genève</td>
+            <td>1.69</td>
+            <td>1.57</td>
+            <td>2.00</td>
+            <td>5.26 M€</td>
+            <td>82</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Londres</td>
+            <td>1.86</td>
+            <td>1.74</td>
+            <td>2.22</td>
+            <td>5.81 M€</td>
+            <td>91</td>
+            <td>11</td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>Maroc CFC</td>
+            <td>0.69</td>
+            <td>0.72</td>
+            <td>0.97</td>
+            <td>2.38 M€</td>
+            <td>40</td>
+            <td>1</td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>Maurice</td>
+            <td>0.80</td>
+            <td>0.82</td>
+            <td>1.09</td>
+            <td>2.70 M€</td>
+            <td>44</td>
+            <td>2</td>
+        </tr>
+    </table>
+    
+    <div class="highlight-box">
+        <p><strong>Économies d'échelle observées :</strong></p>
+        <ul>
+            <li>Réduction du ratio €/tonne de 75% entre An 1 et An 3 pour toutes les localisations</li>
+            <li>Paris offre le meilleur équilibre coût/qualité parmi les hubs européens majeurs</li>
+            <li>Les juridictions offshore (Maroc, Maurice) présentent les coûts les plus bas mais avec des limitations opérationnelles</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">5.</span> Rentabilité</h2>
+    
+    <h3>5.1 Tableau détaillé par localité</h3>
+    
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>EBITDA An1 (M€)</th>
+            <th>EBITDA An2 (M€)</th>
+            <th>EBITDA An3 (M€)</th>
+            <th>Résultat Net 3 ans (M€)</th>
+            <th>ROI 3 ans</th>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td><strong>Paris</strong></td>
+            <td>0.52</td>
+            <td>2.84</td>
+            <td>9.93</td>
+            <td>5.14</td>
+            <td>171.5%</td>
+        </tr>
+        <tr>
+            <td>Genève</td>
+            <td>-0.23</td>
+            <td>2.34</td>
+            <td>9.09</td>
+            <td>5.13</td>
+            <td>187.4%</td>
+        </tr>
+        <tr>
+            <td>Amsterdam</td>
+            <td>0.07</td>
+            <td>2.56</td>
+            <td>9.40</td>
+            <td>4.82</td>
+            <td>176.6%</td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td>Singapour</td>
+            <td>0.41</td>
+            <td>3.18</td>
+            <td>10.32</td>
+            <td>3.22</td>
+            <td>200.0%</td>
+        </tr>
+        <tr>
+            <td>Hambourg</td>
+            <td>0.18</td>
+            <td>2.48</td>
+            <td>9.26</td>
+            <td>3.96</td>
+            <td>132.0%</td>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td>Londres</td>
+            <td>-0.13</td>
+            <td>2.17</td>
+            <td>8.88</td>
+            <td>3.00</td>
+            <td>100.0%</td>
+        </tr>
+    </table>
+    
+    <h3>5.2 Récapitulatif</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px;">
+        <div class="metric-box">
+            <h4>Classement EBITDA An1</h4>
+            <ol>
+                <li>Paris : 0.52 M€</li>
+                <li>Singapour : 0.41 M€</li>
+                <li>Hambourg : 0.18 M€</li>
+                <li>Amsterdam : 0.07 M€</li>
+                <li>Londres : -0.13 M€</li>
+                <li>Genève : -0.23 M€</li>
+            </ol>
+        </div>
+        
+        <div class="metric-box">
+            <h4>Classement ROI 3 ans</h4>
+            <ol>
+                <li>Singapour : 200.0%</li>
+                <li>Genève : 187.4%</li>
+                <li>Amsterdam : 176.6%</li>
+                <li>Paris : 171.5%</li>
+                <li>Hambourg : 132.0%</li>
+                <li>Londres : 100.0%</li>
+            </ol>
+        </div>
+        
+        <div class="metric-box">
+            <h4>Score Rentabilité (/10)</h4>
+            <table style="font-size: 9pt;">
+                <tr>
+                    <td>Singapour</td>
+                    <td style="text-align: right;"><strong>10.00</strong></td>
+                </tr>
+                <tr>
+                    <td>Genève</td>
+                    <td style="text-align: right;">5.92</td>
+                </tr>
+                <tr>
+                    <td>Amsterdam</td>
+                    <td style="text-align: right;">5.61</td>
+                </tr>
+                <tr>
+                    <td>Paris</td>
+                    <td style="text-align: right;">5.46</td>
+                </tr>
+                <tr>
+                    <td>Hambourg</td>
+                    <td style="text-align: right;">4.19</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="highlight-box">
+        <h4>Analyse de la rentabilité</h4>
+        <ul>
+            <li><strong>Singapour</strong> présente le meilleur ROI grâce à sa fiscalité avantageuse (GTP 5-10%) mais avec des contraintes de distance</li>
+            <li><strong>Paris</strong> offre la meilleure rentabilité An 1, critère important pour la phase de lancement</li>
+            <li><strong>Genève et Londres</strong> présentent des pertes en An 1, nécessitant une trésorerie plus importante</li>
+            <li>L'amélioration des marges (3.28% → 5.07%) compense largement l'augmentation des SG&A</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">6.</span> Impact Social</h2>
+    
+    <h3>6.1 Hypothèses impacts sociaux</h3>
+    
+    <p>L'évaluation de l'impact social repose sur 7 critères pondérés pour mesurer la capacité de chaque localisation à créer de la valeur pour la Côte d'Ivoire :</p>
+    
+    <table>
+        <tr>
+            <th>Critère</th>
+            <th>Pondération</th>
+            <th>Indicateurs mesurés</th>
+        </tr>
+        <tr>
+            <td>Proximité CI</td>
+            <td>20%</td>
+            <td>Liens historiques, diaspora, vols directs, langue</td>
+        </tr>
+        <tr>
+            <td>Écosystème ESG</td>
+            <td>15%</td>
+            <td>ONGs, certifications, entreprises sociales</td>
+        </tr>
+        <tr>
+            <td>Financement Impact</td>
+            <td>15%</td>
+            <td>DFI présents, fonds impact, programmes publics</td>
+        </tr>
+        <tr>
+            <td>Emploi/Formation CI</td>
+            <td>15%</td>
+            <td>Stages, échanges universitaires, formation continue</td>
+        </tr>
+        <tr>
+            <td>Transparence</td>
+            <td>15%</td>
+            <td>Standards reporting, culture business éthique</td>
+        </tr>
+        <tr>
+            <td>Influence Policy</td>
+            <td>10%</td>
+            <td>Capacité à influencer standards durabilité</td>
+        </tr>
+        <tr>
+            <td>Partenariats</td>
+            <td>10%</td>
+            <td>Facilité partenariats ONG/entreprises</td>
+        </tr>
+    </table>
+    
+    <h3>6.2 Récapitulatif par localité avec score</h3>
+    
+    <table>
+        <tr>
+            <th>Rang</th>
+            <th>Ville</th>
+            <th>Score /10</th>
+            <th>Forces principales</th>
+            <th>Faiblesses</th>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>1</td>
+            <td><strong>Maroc CFC</strong></td>
+            <td><strong>8.60</strong></td>
+            <td>Coopération Sud-Sud, francophone, proximité culturelle</td>
+            <td>Restrictions changes</td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>2</td>
+            <td><strong>Paris</strong></td>
+            <td><strong>8.50</strong></td>
+            <td>Liens historiques CI, diaspora 150K, AFD/Proparco</td>
+            <td>Perception néo-coloniale</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Genève</td>
+            <td>7.90</td>
+            <td>Hub mondial développement, standards suisses</td>
+            <td>Coûts élevés, élitisme</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Amsterdam</td>
+            <td>7.75</td>
+            <td>Tony's Chocolonely ecosystem, innovation ESG</td>
+            <td>Distance culturelle</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Londres</td>
+            <td>7.60</td>
+            <td>Fairtrade UK leader, soft power global</td>
+            <td>Post-Brexit, coûts</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Maurice</td>
+            <td>7.50</td>
+            <td>Hub africain, solidarité régionale</td>
+            <td>Image offshore</td>
+        </tr>
+    </table>
+    
+    <div class="highlight-box">
+        <h4>Impact économique direct pour la Côte d'Ivoire</h4>
+        <table>
+            <tr>
+                <th>Indicateur</th>
+                <th>An 1</th>
+                <th>An 3</th>
+                <th>Impact</th>
+            </tr>
+            <tr>
+                <td>Emplois directs CI</td>
+                <td>15-20</td>
+                <td>35-40</td>
+                <td>Formation internationale</td>
+            </tr>
+            <tr>
+                <td>Jeunes formés/an</td>
+                <td>20</td>
+                <td>50+</td>
+                <td>Stages et alternance</td>
+            </tr>
+            <tr>
+                <td>Valeur ajoutée locale</td>
+                <td>+8%</td>
+                <td>+15%</td>
+                <td>Sur prix export</td>
+            </tr>
+            <tr>
+                <td>Revenus producteurs</td>
+                <td>+5%</td>
+                <td>+8-12%</td>
+                <td>Via primes durabilité</td>
+            </tr>
+            <tr>
+                <td>Investissement local</td>
+                <td>2M€</td>
+                <td>5M€</td>
+                <td>Infrastructure & formation</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="success-box">
+        <p><strong>Initiatives d'impact social prévues :</strong></p>
+        <ul>
+            <li><strong>Programme "Jeunes Talents CI" :</strong> 10 stagiaires/an formés au trading international</li>
+            <li><strong>Fonds de soutien producteurs :</strong> 2% des profits réinvestis localement</li>
+            <li><strong>Centre de formation Abidjan :</strong> Partenariat avec universités locales</li>
+            <li><strong>Traçabilité blockchain :</strong> 100% des parcelles géolocalisées d'ici 2027</li>
+            <li><strong>Certification progressive :</strong> Objectif 50% volumes certifiés Rainforest Alliance</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">7.</span> Analyse Décisionnelle</h2>
+    
+    <div class="highlight-box">
+        <h3>Pondération des critères</h3>
+        <ul>
+            <li>Score Réglementation : 15%</li>
+            <li>Impact Social : 30%</li>
+            <li>Score ROI : 15%</li>
+            <li>Score DFI : 10%</li>
+            <li>Score Cash : 30%</li>
+        </ul>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Rang</th>
+            <th>Ville</th>
+            <th>Statut</th>
+            <th>Score Reg</th>
+            <th>Impact Social</th>
+            <th>Score ROI</th>
+            <th>Score DFI</th>
+            <th>Score Cash</th>
+            <th>Score Pondéré</th>
+            <th>Décision</th>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>1</td>
+            <td><strong>Paris</strong></td>
+            <td>GO</td>
+            <td>10.00</td>
+            <td>8.50</td>
+            <td>5.46</td>
+            <td>10.00</td>
+            <td>6.66</td>
+            <td><strong>7.87</strong></td>
+            <td><span class="badge badge-success">RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>2</td>
+            <td>Genève</td>
+            <td>GO</td>
+            <td>10.00</td>
+            <td>7.90</td>
+            <td>5.92</td>
+            <td>10.00</td>
+            <td>6.85</td>
+            <td>7.81</td>
+            <td><span class="badge badge-success">RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td>3</td>
+            <td>Amsterdam</td>
+            <td>GO</td>
+            <td>10.00</td>
+            <td>7.75</td>
+            <td>5.61</td>
+            <td>9.00</td>
+            <td>6.93</td>
+            <td>7.65</td>
+            <td><span class="badge badge-success">RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td>4</td>
+            <td>Singapour</td>
+            <td>GO</td>
+            <td>8.00</td>
+            <td>6.15</td>
+            <td>10.00</td>
+            <td>8.00</td>
+            <td>7.16</td>
+            <td>7.49</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td>5</td>
+            <td>Hambourg</td>
+            <td>GO</td>
+            <td>10.00</td>
+            <td>6.75</td>
+            <td>4.19</td>
+            <td>6.00</td>
+            <td>6.74</td>
+            <td>6.78</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td>6</td>
+            <td>Londres</td>
+            <td>GO</td>
+            <td>8.00</td>
+            <td>7.60</td>
+            <td>3.34</td>
+            <td>8.00</td>
+            <td>6.47</td>
+            <td>6.72</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td>7</td>
+            <td>Maurice</td>
+            <td>GO</td>
+            <td>10.00</td>
+            <td>7.50</td>
+            <td>1.09</td>
+            <td>7.00</td>
+            <td>3.36</td>
+            <td>5.62</td>
+            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td>8</td>
+            <td>Andorre</td>
+            <td>GO</td>
+            <td>7.00</td>
+            <td>3.40</td>
+            <td>3.00</td>
+            <td>2.00</td>
+            <td>4.93</td>
+            <td>4.20</td>
+            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
+        </tr>
+    </table>
+    
+    <h3>Analyse détaillée - Top 3</h3>
+    
+    <table>
+        <tr>
+            <th>Métrique</th>
+            <th>#1 Paris</th>
+            <th>#2 Genève</th>
+            <th>#3 Amsterdam</th>
+        </tr>
+        <tr>
+            <td>Volume An1</td>
+            <td>6,490</td>
+            <td>6,490</td>
+            <td>6,490</td>
+        </tr>
+        <tr>
+            <td>CA An1 (M€)</td>
+            <td>54.18</td>
+            <td>54.18</td>
+            <td>54.18</td>
+        </tr>
+        <tr>
+            <td>SG&A An1 (M€)</td>
+            <td>1.29</td>
+            <td>1.69</td>
+            <td>1.34</td>
+        </tr>
+        <tr>
+            <td>SG&A/tonne</td>
+            <td>199</td>
+            <td>261</td>
+            <td>206</td>
+        </tr>
+        <tr>
+            <td>EBITDA An1 (M€)</td>
+            <td>0.52</td>
+            <td>-0.23</td>
+            <td>0.07</td>
+        </tr>
+        <tr>
+            <td>Résultat 3 ans (M€)</td>
+            <td>5.14</td>
+            <td>5.13</td>
+            <td>4.82</td>
+        </tr>
+        <tr>
+            <td>ROI 3 ans</td>
+            <td>171.5%</td>
+            <td>187.4%</td>
+            <td>176.6%</td>
+        </tr>
+        <tr>
+            <td>Ranking SG&A</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+        </tr>
+    </table>
+    
+    <div class="recommendation-box">
+        <h3 style="text-align: center;">🎯 Recommandation Finale</h3>
+        <p style="text-align: center; font-size: 16pt; font-weight: bold;">Établir le bureau de trading international à Paris</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+            <div>
+                <h4>✅ Forces de Paris</h4>
+                <ul>
+                    <li>Meilleur score global (7.87/10)</li>
+                    <li>Liens historiques forts avec la CI</li>
+                    <li>Diaspora ivoirienne importante (150K)</li>
+                    <li>AFD/Proparco pour financement impact</li>
+                    <li>Convention fiscale optimale</li>
+                    <li>EBITDA positif dès An 1</li>
+                    <li>Écosystème cacao durable mature</li>
+                </ul>
+            </div>
+            <div>
+                <h4>⚠️ Risques à mitiger</h4>
+                <ul>
+                    <li>Perception néo-coloniale à gérer</li>
+                    <li>Charges sociales élevées (45%)</li>
+                    <li>Coûts immobiliers La Défense</li>
+                    <li>Complexité administrative française</li>
+                    <li>Besoin capital initial 10M USD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2><span class="numero">8.</span> Risques et Planning d'Implémentation</h2>
+    
+    <h3>Analyse des Risques</h3>
+    
+    <table>
+        <tr>
+            <th>Type de risque</th>
+            <th>Impact</th>
+            <th>Probabilité</th>
+            <th>Mitigation</th>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td><strong>Volatilité prix extrême</strong></td>
+            <td>Élevé<br/>+33% = 47M USD</td>
+            <td>Moyenne</td>
+            <td>• Buffer 30% sur marges<br/>• Options sur 20% volume<br/>• Limites positions strictes</td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td><strong>Margin calls ICE</strong></td>
+            <td>Moyen<br/>Blocage trading</td>
+            <td>Élevée</td>
+            <td>• Ligne dédiée 15M EUR<br/>• Monitoring 24/7<br/>• Procédures escalade</td>
+        </tr>
+        <tr style="background-color: #FEE2E2;">
+            <td><strong>Non-conformité EUDR</strong></td>
+            <td>Élevé<br/>4% CA EU</td>
+            <td>Faible</td>
+            <td>• Traçabilité GPS 100%<br/>• Audits trimestriels<br/>• Formation continue</td>
+        </tr>
+        <tr style="background-color: #D1FAE5;">
+            <td><strong>Double imposition</strong></td>
+            <td>Moyen<br/>15% profits</td>
+            <td>Nulle</td>
+            <td>• Convention France-CI<br/>• Structure optimisée<br/>• Conseil fiscal Big 4</td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td><strong>Perte key people</strong></td>
+            <td>Moyen<br/>Arrêt activité</td>
+            <td>Moyenne</td>
+            <td>• Packages compétitifs<br/>• Plan succession<br/>• Rétention long terme</td>
+        </tr>
+        <tr style="background-color: #FEF3C7;">
+            <td><strong>Réputation</strong></td>
+            <td>Moyen<br/>Image Neskao</td>
+            <td>Moyenne</td>
+            <td>• Communication proactive<br/>• Équipe diverse<br/>• Transparence totale</td>
+        </tr>
+    </table>
+    
+    <h3>Planning d'Implémentation</h3>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <h4>Phase 1 : Préparation (Mois 1-3)</h4>
+            <p><strong>Budget : 200K€</strong></p>
+            <ul>
+                <li>✓ Décision stratégique du CA Neskao</li>
+                <li>Création structure juridique SAS France</li>
+                <li>Mobilisation capital 10M USD (actionnaires + DFI)</li>
+                <li>Négociation lignes bancaires (BNP, SocGen, Crédit Agricole)</li>
+                <li>Dépôt dossier agrément CCC Côte d'Ivoire</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 2 : Setup Légal et Infrastructure (Mois 4-6)</h4>
+            <p><strong>Budget : 500K€</strong></p>
+            <ul>
+                <li>Finalisation agrément CCC</li>
+                <li>Location bureaux La Défense (800-1000m²)</li>
+                <li>Installation infrastructure IT/Trading</li>
+                <li>Ouverture compte trading via broker (StoneX/Marex)</li>
+                <li>Mise en place systèmes risk management</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 3 : Recrutement et Formation (Mois 5-7)</h4>
+            <p><strong>Budget : 400K€</strong></p>
+            <ul>
+                <li>Recrutement Head of Trading (ex-Cargill/OLAM)</li>
+                <li>Recrutement 2 traders senior</li>
+                <li>Recrutement risk manager</li>
+                <li>Recrutement équipe support (4 personnes)</li>
+                <li>Formation équipe sur procédures Neskao</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 4 : Soft Launch (Mois 8-9)</h4>
+            <p><strong>Budget : 2M USD</strong></p>
+            <ul>
+                <li>Démarrage avec 100% trading physique back-to-back</li>
+                <li>Tests systèmes en conditions réelles</li>
+                <li>Premiers contrats forward CCC (500T/mois)</li>
+                <li>Validation processus avec contreparties</li>
+                <li>Ajustements procédures</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <h4>Phase 5 : Full Operations (Mois 10+)</h4>
+            <p><strong>Budget : 7.3M USD</strong></p>
+            <ul>
+                <li>Introduction progressive hedging (5% → 45%)</li>
+                <li>Démarrage spéculation limitée (1% → 5%)</li>
+                <li>Montée en volume selon plan 3 ans</li>
+                <li>Expansion équipe selon croissance</li>
+                <li>Lancement programme impact social CI</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="success-box">
+        <h3>🚀 Go-live cible : T3 2026</h3>
+        <ul>
+            <li><strong>Budget total setup :</strong> 250K€</li>
+            <li><strong>Capital initial requis :</strong> 10M USD</li>
+            <li><strong>Durée totale :</strong> 9 mois</li>
+            <li><strong>Équipe cible An 1 :</strong> 7-8 personnes</li>
+            <li><strong>Break-even opérationnel :</strong> Mois 6</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h1><span class="numero">IV.</span> Annexes</h1>
+    
+    <h2>Annexe 1 : Hypothèses de modélisation financière</h2>
+    
+    <table>
+        <tr>
+            <th>Catégorie</th>
+            <th>Paramètre</th>
+            <th>Valeur</th>
+        </tr>
+        <tr>
+            <td rowspan="5"><strong>Prix & Marché</strong></td>
+            <td>Prix cacao moyen</td>
+            <td>6,973.84 EUR/T</td>
+        </tr>
+        <tr>
+            <td>Inflation annuelle</td>
+            <td>2.5%</td>
+        </tr>
+        <tr>
+            <td>Croissance volume</td>
+            <td>An1→An2: +110%, An2→An3: +63%</td>
+        </tr>
+        <tr>
+            <td>Part marché CI</td>
+            <td>0.4% An1 → 1.5% An3</td>
+        </tr>
+        <tr>
+            <td>Mix export/local CI</td>
+            <td>70/30</td>
+        </tr>
+        <tr>
+            <td rowspan="4"><strong>Financement</strong></td>
+            <td>Taux EURIBOR</td>
+            <td>3.5%</td>
+        </tr>
+        <tr>
+            <td>Spread bancaire</td>
+            <td>200-300 bps</td>
+        </tr>
+        <tr>
+            <td>Ratio D/E cible</td>
+            <td>6x</td>
+        </tr>
+        <tr>
+            <td>WACC</td>
+            <td>8.5%</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><strong>Opérations</strong></td>
+            <td>Jours ouvrés/an</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>Rotation stock</td>
+            <td>6x/an</td>
+        </tr>
+        <tr>
+            <td>Pertes & coulage</td>
+            <td>0.5%</td>
+        </tr>
+    </table>
+    
+    <h2>Annexe 2 : Contacts et ressources clés</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="highlight-box">
+            <h4>Institutions Côte d'Ivoire</h4>
+            <ul>
+                <li><strong>CCC :</strong> Conseil du Café-Cacao</li>
+                <li><strong>APEX-CI :</strong> Agence de Promotion des Exportations</li>
+                <li><strong>Port Autonome d'Abidjan</strong></li>
+                <li><strong>BCEAO :</strong> Banque Centrale</li>
+            </ul>
+        </div>
+        
+        <div class="highlight-box">
+            <h4>Partenaires Financement</h4>
+            <ul>
+                <li><strong>AFD :</strong> Agence Française de Développement</li>
+                <li><strong>Proparco :</strong> Filiale AFD secteur privé</li>
+                <li><strong>IFC :</strong> Société Financière Internationale</li>
+                <li><strong>FMO :</strong> Banque développement Pays-Bas</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2>Annexe 3 : Glossaire</h2>
+    
+    <table>
+        <tr>
+            <th>Terme</th>
+            <th>Définition</th>
+        </tr>
+        <tr>
+            <td><strong>CCC</strong></td>
+            <td>Conseil du Café-Cacao, régulateur ivoirien de la filière</td>
+        </tr>
+        <tr>
+            <td><strong>EUDR</strong></td>
+            <td>EU Deforestation Regulation, règlement européen sur la déforestation</td>
+        </tr>
+        <tr>
+            <td><strong>DFI</strong></td>
+            <td>Development Finance Institution, institution de financement du développement</td>
+        </tr>
+        <tr>
+            <td><strong>GTP</strong></td>
+            <td>Global Trader Programme, statut fiscal avantageux à Singapour</td>
+        </tr>
+        <tr>
+            <td><strong>LID</strong></td>
+            <td>Living Income Differential, prime durabilité Côte d'Ivoire/Ghana</td>
+        </tr>
+        <tr>
+            <td><strong>ICE</strong></td>
+            <td>Intercontinental Exchange, bourse des matières premières</td>
+        </tr>
+    </table>
+    
+    <div class="highlight-box" style="margin-top: 40px;">
+        <p style="text-align: center; font-style: italic; margin: 0;">
+            <strong>Neskao SA</strong><br/>
+            Zone Industrielle de Vridi, Abidjan, Côte d'Ivoire<br/>
+            Ce document est confidentiel et propriété de Neskao<br/>
+            Ne pas diffuser sans autorisation préalable<br/>
+            © 2025 Neskao - Tous droits réservés
+        </p>
+    </div>
+</body>
+</html>
