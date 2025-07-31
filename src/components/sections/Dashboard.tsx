@@ -3,313 +3,339 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui';
 
 /**
  * Dashboard component with 12 scrollable city cards and dynamic tables
- * Shows EBITDA An1, required equity An1, and general score for each city
+ * Shows Financement Total An1, SG&A An1, required equity An1, and general score for each city
  * Dynamic tables update based on selected city
  */
 const Dashboard: React.FC = () => {
   const [selectedCity, setSelectedCity] = useState('Paris');
 
-  // Données complètes des 12 villes
+  // Données de financement détaillé (from Financement component)
+  const financementDetailData = [
+    { ville: 'Paris', an1: { total: 6.87 } },
+    { ville: 'Singapour', an1: { total: 5.56 } },
+    { ville: 'Genève', an1: { total: 6.32 } },
+    { ville: 'Amsterdam', an1: { total: 6.17 } },
+    { ville: 'Chypre', an1: { total: 8.43 } },
+    { ville: 'Hambourg', an1: { total: 6.63 } },
+    { ville: 'Londres', an1: { total: 5.84 } },
+    { ville: 'Dubai', an1: { total: 7.69 } },
+    { ville: 'Maroc CFC', an1: { total: 11.34 } },
+    { ville: 'Tel Aviv', an1: { total: 7.28 } },
+    { ville: 'Maurice', an1: { total: 9.41 } },
+    { ville: 'Andorre', an1: { total: 8.55 } }
+  ];
+
+  // Helper function to get SG&A and Cash data
+  const getSgaCashData = (ville: string) => {
+    const plCity = plData[ville];
+    const financementCity = financementDetailData.find(f => f.ville === ville);
+    return {
+      sgaAn1: plCity?.an1.sgaCosts || 0,
+      cashAn1: financementCity?.an1.total || 0  // Using financement total as cash requirement
+    };
+  };
+
+  // Données complètes des 12 villes - Classées par score décroissant selon Analyse Décisionnelle
   const villesData = [
     {
       nom: 'Paris',
-      ebitdaAn1: 0.52,
-      capitalInitial: 1.89,
-      scoreGeneral: 7.87,
+      ebitdaAn1: 0.12,
+      capitalInitial: 0.95,
+      scoreGeneral: 8.08,
       statut: 'RECOMMANDÉ',
       color: 'bg-teal-50/30 border-teal-300 text-teal-700',
       flag: '🇫🇷'
     },
     {
+      nom: 'Singapour',
+      ebitdaAn1: 0.01,
+      capitalInitial: 0.81,
+      scoreGeneral: 8.06,
+      statut: 'POSSIBLE',
+      color: 'bg-sky-50/30 border-sky-300 text-sky-700',
+      flag: '🇸🇬'
+    },
+    {
       nom: 'Genève',
       ebitdaAn1: -0.09,
-      capitalInitial: 1.78,
-      scoreGeneral: 7.81,
+      capitalInitial: 0.89,
+      scoreGeneral: 7.86,
       statut: 'RECOMMANDÉ',
       color: 'bg-teal-50/30 border-teal-300 text-teal-700',
       flag: '🇨🇭'
     },
     {
       nom: 'Amsterdam',
-      ebitdaAn1: 0.07,
-      capitalInitial: 1.74,
-      scoreGeneral: 7.65,
-      statut: 'RECOMMANDÉ',
-      color: 'bg-teal-50/30 border-teal-300 text-teal-700',
+      ebitdaAn1: 0.04,
+      capitalInitial: 0.87,
+      scoreGeneral: 7.67,
+      statut: 'POSSIBLE',
+      color: 'bg-sky-50/30 border-sky-300 text-sky-700',
       flag: '🇳🇱'
     },
     {
-      nom: 'Singapour',
-      ebitdaAn1: 0.02,
-      capitalInitial: 1.61,
-      scoreGeneral: 7.49,
+      nom: 'Chypre',
+      ebitdaAn1: 0.20,
+      capitalInitial: 3.13,
+      scoreGeneral: 7.41,
       statut: 'POSSIBLE',
       color: 'bg-sky-50/30 border-sky-300 text-sky-700',
-      flag: '🇸🇬'
+      flag: '🇨🇾'
     },
     {
       nom: 'Hambourg',
-      ebitdaAn1: 0.09,
-      capitalInitial: 1.85,
-      scoreGeneral: 6.78,
+      ebitdaAn1: 0.05,
+      capitalInitial: 0.93,
+      scoreGeneral: 7.32,
       statut: 'POSSIBLE',
       color: 'bg-sky-50/30 border-sky-300 text-sky-700',
       flag: '🇩🇪'
     },
     {
       nom: 'Londres',
-      ebitdaAn1: -0.67,
-      capitalInitial: 2.00,
-      scoreGeneral: 6.72,
+      ebitdaAn1: -0.34,
+      capitalInitial: 1.00,
+      scoreGeneral: 7.06,
       statut: 'POSSIBLE',
       color: 'bg-sky-50/30 border-sky-300 text-sky-700',
       flag: '🇬🇧'
     },
     {
-      nom: 'Chypre',
-      ebitdaAn1: 0.40,
-      capitalInitial: 2.38,
-      scoreGeneral: 6.51,
-      statut: 'POSSIBLE',
-      color: 'bg-sky-50/30 border-sky-300 text-sky-700',
-      flag: '🇨🇾'
-    },
-    {
-      nom: 'Maurice',
-      ebitdaAn1: 0.82,
-      capitalInitial: 1.20,
-      scoreGeneral: 5.62,
-      statut: 'DÉCONSEILLÉ',
-      color: 'bg-gray-100 border-gray-300 text-gray-700',
-      flag: '🇲🇺'
-    },
-    {
-      nom: 'Andorre',
-      ebitdaAn1: 0.76,
-      capitalInitial: 1.15,
-      scoreGeneral: 4.20,
-      statut: 'DÉCONSEILLÉ',
-      color: 'bg-gray-100 border-gray-300 text-gray-700',
-      flag: '🇦🇩'
-    },
-    {
-      nom: 'Dubai',
-      ebitdaAn1: 0.00,
-      capitalInitial: 1.70,
-      scoreGeneral: 3.85,
+      nom: 'Maroc CFC',
+      ebitdaAn1: 0.47,
+      capitalInitial: 5.67,
+      scoreGeneral: 6.91,
       statut: 'NON RECOMMANDÉ',
       color: 'bg-rose-50/30 border-rose-300 text-rose-700',
-      flag: '🇦🇪'
+      flag: '🇲🇦'
     },
     {
       nom: 'Tel Aviv',
-      ebitdaAn1: -0.06,
-      capitalInitial: 1.65,
-      scoreGeneral: 3.20,
+      ebitdaAn1: -0.03,
+      capitalInitial: 2.17,
+      scoreGeneral: 6.58,
       statut: 'NON RECOMMANDÉ',
       color: 'bg-rose-50/30 border-rose-300 text-rose-700',
       flag: '🇮🇱'
     },
     {
-      nom: 'Maroc CFC',
-      ebitdaAn1: 0.93,
-      capitalInitial: 1.00,
-      scoreGeneral: 2.95,
+      nom: 'Maurice',
+      ebitdaAn1: 0.41,
+      capitalInitial: 3.76,
+      scoreGeneral: 6.56,
       statut: 'NON RECOMMANDÉ',
       color: 'bg-rose-50/30 border-rose-300 text-rose-700',
-      flag: '🇲🇦'
+      flag: '🇲🇺'
+    },
+    {
+      nom: 'Dubai',
+      ebitdaAn1: 0.00,
+      capitalInitial: 2.59,
+      scoreGeneral: 6.50,
+      statut: 'POSSIBLE',
+      color: 'bg-sky-50/30 border-sky-300 text-sky-700',
+      flag: '🇦🇪'
+    },
+    {
+      nom: 'Andorre',
+      ebitdaAn1: 0.38,
+      capitalInitial: 2.88,
+      scoreGeneral: 5.23,
+      statut: 'NON RECOMMANDÉ',
+      color: 'bg-rose-50/30 border-rose-300 text-rose-700',
+      flag: '🇦🇩'
     }
   ];
 
   // Données P&L par ville - VRAIES DONNÉES du fichier rentabilite-updateddatas.js
   const plData: Record<string, any> = {
     Paris: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.26, ebitda: 0.52, resultatNet: -0.43 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.41, ebitda: 2.84, resultatNet: 0.69 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 1.62, ebitda: 9.93, resultatNet: 4.88 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.77, ebitda: 0.12, resultatNet: -0.36 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.73, ebitda: 1.40, resultatNet: 0.37 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 0.89, ebitda: 6.81, resultatNet: 5.16 }
     },
     Genève: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.63, ebitda: -0.09, resultatNet: -0.82 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.50, ebitda: 2.75, resultatNet: 1.07 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 1.93, ebitda: 9.62, resultatNet: 5.96 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.98, ebitda: -0.09, resultatNet: -0.51 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.90, ebitda: 1.23, resultatNet: 0.34 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.16, ebitda: 6.54, resultatNet: 5.12 }
     },
     Amsterdam: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.70, ebitda: 0.07, resultatNet: -0.77 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.69, ebitda: 2.56, resultatNet: 0.75 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 2.15, ebitda: 9.40, resultatNet: 4.83 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.80, ebitda: 0.04, resultatNet: -0.48 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.79, ebitda: 1.34, resultatNet: 0.43 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.02, ebitda: 6.68, resultatNet: 5.23 }
     },
     Singapour: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.75, ebitda: 0.02, resultatNet: -0.67 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.68, ebitda: 2.58, resultatNet: 1.00 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 2.14, ebitda: 9.40, resultatNet: 6.55 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 1.05, ebitda: 0.01, resultatNet: -0.34 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 1.01, ebitda: 1.12, resultatNet: 0.39 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.29, ebitda: 6.41, resultatNet: 5.24 }
     },
     Hambourg: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.68, ebitda: 0.09, resultatNet: -0.82 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.68, ebitda: 2.57, resultatNet: 0.60 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 2.17, ebitda: 9.38, resultatNet: 4.42 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.78, ebitda: 0.05, resultatNet: -0.46 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.75, ebitda: 1.38, resultatNet: 0.39 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 0.98, ebitda: 6.72, resultatNet: 5.14 }
     },
     Londres: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 2.44, ebitda: -0.67, resultatNet: -1.40 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 2.39, ebitda: 1.86, resultatNet: 0.31 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 3.08, ebitda: 8.47, resultatNet: 5.06 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 1.12, ebitda: -0.34, resultatNet: -0.71 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 1.04, ebitda: 1.09, resultatNet: 0.31 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.33, ebitda: 6.37, resultatNet: 5.13 }
     },
     Chypre: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.38, ebitda: 0.40, resultatNet: -0.51 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.34, ebitda: 2.91, resultatNet: 0.84 },
-      an3: { ca: 227.58, margeTrading: 11.31, sgaCosts: 1.71, ebitda: 9.60, resultatNet: 5.59 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.83, ebitda: 0.20, resultatNet: -0.34 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.80, ebitda: 1.33, resultatNet: 0.05 },
+      an3: { ca: 151.72, margeTrading: 7.66, sgaCosts: 1.01, ebitda: 6.65, resultatNet: 4.93 }
     },
     Maurice: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 0.95, ebitda: 0.82, resultatNet: -0.51 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 0.97, ebitda: 3.29, resultatNet: 0.34 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 1.26, ebitda: 10.29, resultatNet: 4.74 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.48, ebitda: 0.41, resultatNet: -0.26 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.49, ebitda: 1.64, resultatNet: 0.15 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 0.65, ebitda: 7.05, resultatNet: 4.41 }
     },
     Andorre: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.01, ebitda: 0.76, resultatNet: -0.40 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.00, ebitda: 3.25, resultatNet: 0.53 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 1.30, ebitda: 10.25, resultatNet: 5.26 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.52, ebitda: 0.38, resultatNet: -0.25 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.52, ebitda: 1.61, resultatNet: 0.22 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 0.69, ebitda: 7.01, resultatNet: 4.61 }
     },
     Dubai: {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.77, ebitda: 0.00, resultatNet: -0.95 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.73, ebitda: 2.52, resultatNet: 0.45 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 2.24, ebitda: 9.31, resultatNet: 5.99 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.84, ebitda: 0.00, resultatNet: -0.48 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.80, ebitda: 1.33, resultatNet: 0.29 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.03, ebitda: 6.67, resultatNet: 4.45 }
     },
     'Tel Aviv': {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 1.84, ebitda: -0.06, resultatNet: -1.06 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 1.81, ebitda: 2.44, resultatNet: 0.25 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 2.39, ebitda: 9.16, resultatNet: 4.54 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.87, ebitda: -0.03, resultatNet: -0.53 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.83, ebitda: 1.30, resultatNet: 0.20 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 1.09, ebitda: 6.61, resultatNet: 4.19 }
     },
     'Maroc CFC': {
-      an1: { ca: 54.16, margeTrading: 1.78, sgaCosts: 0.84, ebitda: 0.93, resultatNet: -0.47 },
-      an2: { ca: 132.57, margeTrading: 4.25, sgaCosts: 0.85, ebitda: 3.40, resultatNet: 0.29 },
-      an3: { ca: 227.58, margeTrading: 11.55, sgaCosts: 1.12, ebitda: 10.43, resultatNet: 4.95 }
+      an1: { ca: 27.08, margeTrading: 0.89, sgaCosts: 0.41, ebitda: 0.47, resultatNet: -0.24 },
+      an2: { ca: 66.29, margeTrading: 2.13, sgaCosts: 0.43, ebitda: 1.70, resultatNet: 0.14 },
+      an3: { ca: 151.72, margeTrading: 7.70, sgaCosts: 0.58, ebitda: 7.12, resultatNet: 4.20 }
     }
   };
 
   // Données SG&A par ville
   const sgaData: Record<string, any> = {
     Paris: {
-      an1: { personnel: 630, bureaux: 75, itSystemes: 123, compliance: 51, voyages: 60, setup: 250, total: 1290 },
-      an2: { personnel: 705, bureaux: 88, itSystemes: 153, compliance: 70, voyages: 75, setup: 0, total: 1218 },
-      an3: { personnel: 810, bureaux: 98, itSystemes: 194, compliance: 124, voyages: 103, setup: 0, total: 1478 }
+      an1: { personnel: 378, bureaux: 39, itSystemes: 123, compliance: 51, voyages: 33, setup: 150, total: 774 },
+      an2: { personnel: 423, bureaux: 44, itSystemes: 153, compliance: 70, voyages: 41, setup: 0, total: 731 },
+      an3: { personnel: 486, bureaux: 49, itSystemes: 194, compliance: 124, voyages: 56, setup: 0, total: 887 }
     },
     Genève: {
-      an1: { personnel: 805, bureaux: 92, itSystemes: 123, compliance: 73, voyages: 60, setup: 250, total: 1632 },
-      an2: { personnel: 922, bureaux: 104, itSystemes: 153, compliance: 88, voyages: 75, setup: 0, total: 1501 },
-      an3: { personnel: 1182, bureaux: 120, itSystemes: 194, compliance: 141, voyages: 103, setup: 0, total: 1929 }
+      an1: { personnel: 483, bureaux: 48, itSystemes: 123, compliance: 73, voyages: 33, setup: 219, total: 979 },
+      an2: { personnel: 553, bureaux: 52, itSystemes: 153, compliance: 88, voyages: 41, setup: 0, total: 901 },
+      an3: { personnel: 709, bureaux: 60, itSystemes: 194, compliance: 141, voyages: 53, setup: 0, total: 1157 }
     },
     Amsterdam: {
-      an1: { personnel: 693, bureaux: 100, itSystemes: 123, compliance: 51, voyages: 60, setup: 220, total: 1338 },
-      an2: { personnel: 792, bureaux: 112, itSystemes: 153, compliance: 70, voyages: 75, setup: 0, total: 1318 },
-      an3: { personnel: 1012, bureaux: 128, itSystemes: 194, compliance: 124, voyages: 103, setup: 0, total: 1697 }
+      an1: { personnel: 416, bureaux: 52, itSystemes: 123, compliance: 51, voyages: 33, setup: 128, total: 803 },
+      an2: { personnel: 475, bureaux: 56, itSystemes: 153, compliance: 70, voyages: 37, setup: 0, total: 791 },
+      an3: { personnel: 607, bureaux: 64, itSystemes: 194, compliance: 124, voyages: 51, setup: 0, total: 1018 }
     },
     Singapour: {
-      an1: { personnel: 850, bureaux: 109, itSystemes: 123, compliance: 65, voyages: 75, setup: 320, total: 1754 },
-      an2: { personnel: 970, bureaux: 123, itSystemes: 153, compliance: 82, voyages: 89, setup: 0, total: 1676 },
-      an3: { personnel: 1245, bureaux: 146, itSystemes: 194, compliance: 137, voyages: 118, setup: 0, total: 2143 }
+      an1: { personnel: 510, bureaux: 55, itSystemes: 123, compliance: 65, voyages: 45, setup: 255, total: 1053 },
+      an2: { personnel: 582, bureaux: 62, itSystemes: 153, compliance: 82, voyages: 53, setup: 0, total: 1005 },
+      an3: { personnel: 747, bureaux: 73, itSystemes: 194, compliance: 137, voyages: 59, setup: 0, total: 1286 }
     },
     Hambourg: {
-      an1: { personnel: 640, bureaux: 67, itSystemes: 123, compliance: 51, voyages: 60, setup: 200, total: 1296 },
-      an2: { personnel: 730, bureaux: 75, itSystemes: 153, compliance: 70, voyages: 75, setup: 0, total: 1253 },
-      an3: { personnel: 935, bureaux: 87, itSystemes: 194, compliance: 124, voyages: 103, setup: 0, total: 1638 }
+      an1: { personnel: 384, bureaux: 34, itSystemes: 123, compliance: 51, voyages: 36, setup: 150, total: 778 },
+      an2: { personnel: 438, bureaux: 38, itSystemes: 153, compliance: 70, voyages: 45, setup: 0, total: 752 },
+      an3: { personnel: 561, bureaux: 43, itSystemes: 194, compliance: 124, voyages: 61, setup: 0, total: 983 }
     },
     Londres: {
-      an1: { personnel: 920, bureaux: 150, itSystemes: 123, compliance: 65, voyages: 75, setup: 400, total: 1860 },
-      an2: { personnel: 1050, bureaux: 169, itSystemes: 153, compliance: 82, voyages: 89, setup: 0, total: 1736 },
-      an3: { personnel: 1350, bureaux: 195, itSystemes: 194, compliance: 137, voyages: 118, setup: 0, total: 2217 }
+      an1: { personnel: 552, bureaux: 78, itSystemes: 123, compliance: 65, voyages: 39, setup: 259, total: 1116 },
+      an2: { personnel: 630, bureaux: 84, itSystemes: 153, compliance: 82, voyages: 47, setup: 0, total: 1042 },
+      an3: { personnel: 810, bureaux: 97, itSystemes: 194, compliance: 137, voyages: 59, setup: 0, total: 1330 }
     },
     Chypre: {
-      an1: { personnel: 700, bureaux: 69, itSystemes: 123, compliance: 55, voyages: 65, setup: 250, total: 1384 },
-      an2: { personnel: 800, bureaux: 78, itSystemes: 153, compliance: 72, voyages: 78, setup: 0, total: 1330 },
-      an3: { personnel: 1025, bureaux: 90, itSystemes: 194, compliance: 128, voyages: 108, setup: 0, total: 1678 }
+      an1: { personnel: 420, bureaux: 35, itSystemes: 123, compliance: 55, voyages: 33, setup: 164, total: 830 },
+      an2: { personnel: 480, bureaux: 39, itSystemes: 153, compliance: 72, voyages: 39, setup: 0, total: 798 },
+      an3: { personnel: 615, bureaux: 45, itSystemes: 194, compliance: 128, voyages: 54, setup: 0, total: 1007 }
     },
     Maurice: {
-      an1: { personnel: 480, bureaux: 40, itSystemes: 123, compliance: 45, voyages: 55, setup: 150, total: 795 },
-      an2: { personnel: 550, bureaux: 45, itSystemes: 153, compliance: 62, voyages: 68, setup: 0, total: 821 },
-      an3: { personnel: 705, bureaux: 52, itSystemes: 194, compliance: 115, voyages: 93, setup: 0, total: 1086 }
+      an1: { personnel: 288, bureaux: 20, itSystemes: 123, compliance: 45, voyages: 27, setup: 74, total: 477 },
+      an2: { personnel: 330, bureaux: 23, itSystemes: 153, compliance: 62, voyages: 34, setup: 0, total: 492 },
+      an3: { personnel: 423, bureaux: 26, itSystemes: 194, compliance: 115, voyages: 46, setup: 0, total: 652 }
     },
     Andorre: {
-      an1: { personnel: 520, bureaux: 45, itSystemes: 123, compliance: 48, voyages: 58, setup: 160, total: 874 },
-      an2: { personnel: 595, bureaux: 50, itSystemes: 153, compliance: 65, voyages: 71, setup: 0, total: 858 },
-      an3: { personnel: 765, bureaux: 58, itSystemes: 194, compliance: 118, voyages: 96, setup: 0, total: 1142 }
+      an1: { personnel: 312, bureaux: 23, itSystemes: 123, compliance: 48, voyages: 29, setup: 89, total: 524 },
+      an2: { personnel: 357, bureaux: 25, itSystemes: 153, compliance: 65, voyages: 35, setup: 0, total: 515 },
+      an3: { personnel: 459, bureaux: 29, itSystemes: 194, compliance: 118, voyages: 48, setup: 0, total: 685 }
     },
     Dubai: {
-      an1: { personnel: 750, bureaux: 92, itSystemes: 123, compliance: 58, voyages: 70, setup: 280, total: 1408 },
-      an2: { personnel: 860, bureaux: 104, itSystemes: 153, compliance: 75, voyages: 83, setup: 0, total: 1331 },
-      an3: { personnel: 1100, bureaux: 120, itSystemes: 194, compliance: 131, voyages: 111, setup: 0, total: 1713 }
+      an1: { personnel: 450, bureaux: 46, itSystemes: 123, compliance: 58, voyages: 35, setup: 132, total: 844 },
+      an2: { personnel: 516, bureaux: 52, itSystemes: 153, compliance: 75, voyages: 41, setup: 0, total: 798 },
+      an3: { personnel: 660, bureaux: 60, itSystemes: 194, compliance: 131, voyages: 55, setup: 0, total: 1028 }
     },
     'Tel Aviv': {
-      an1: { personnel: 780, bureaux: 105, itSystemes: 123, compliance: 62, voyages: 72, setup: 300, total: 1451 },
-      an2: { personnel: 890, bureaux: 118, itSystemes: 153, compliance: 79, voyages: 85, setup: 0, total: 1382 },
-      an3: { personnel: 1140, bureaux: 136, itSystemes: 194, compliance: 134, voyages: 114, setup: 0, total: 1817 }
+      an1: { personnel: 468, bureaux: 53, itSystemes: 123, compliance: 62, voyages: 36, setup: 129, total: 871 },
+      an2: { personnel: 534, bureaux: 59, itSystemes: 153, compliance: 79, voyages: 42, setup: 0, total: 829 },
+      an3: { personnel: 684, bureaux: 68, itSystemes: 194, compliance: 134, voyages: 57, setup: 0, total: 1090 }
     },
     'Maroc CFC': {
-      an1: { personnel: 420, bureaux: 35, itSystemes: 123, compliance: 40, voyages: 50, setup: 150, total: 688 },
-      an2: { personnel: 480, bureaux: 39, itSystemes: 153, compliance: 57, voyages: 63, setup: 0, total: 717 },
-      an3: { personnel: 615, bureaux: 45, itSystemes: 194, compliance: 110, voyages: 86, setup: 0, total: 971 }
+      an1: { personnel: 252, bureaux: 18, itSystemes: 123, compliance: 40, voyages: 25, setup: 74, total: 412 },
+      an2: { personnel: 288, bureaux: 20, itSystemes: 153, compliance: 57, voyages: 31, setup: 0, total: 430 },
+      an3: { personnel: 369, bureaux: 23, itSystemes: 194, compliance: 110, voyages: 43, setup: 0, total: 582 }
     }
   };
 
   // Données de financement par ville
   const financementData: Record<string, any> = {
     Paris: {
-      an1: { total: 13.73, equity: 1.89, dette: 11.84, coutTotal: 0.85 },
-      an2: { total: 31.69, equity: 4.37, dette: 27.32, coutTotal: 1.96 },
-      an3: { total: 51.77, equity: 7.14, dette: 44.63, coutTotal: 3.20 }
+      an1: { total: 6.87, equity: 0.95, dette: 5.92, coutTotal: 0.43 },
+      an2: { total: 15.85, equity: 2.19, dette: 13.66, coutTotal: 0.98 },
+      an3: { total: 25.89, equity: 3.57, dette: 22.32, coutTotal: 1.60 }
     },
     Genève: {
-      an1: { total: 12.64, equity: 1.78, dette: 10.86, coutTotal: 0.73 },
-      an2: { total: 29.19, equity: 4.13, dette: 25.05, coutTotal: 1.68 },
-      an3: { total: 47.68, equity: 6.75, dette: 40.93, coutTotal: 2.74 }
+      an1: { total: 6.32, equity: 0.89, dette: 5.43, coutTotal: 0.37 },
+      an2: { total: 14.60, equity: 2.06, dette: 12.54, coutTotal: 0.84 },
+      an3: { total: 23.84, equity: 3.37, dette: 20.48, coutTotal: 1.37 }
     },
     Amsterdam: {
-      an1: { total: 12.33, equity: 1.74, dette: 10.59, coutTotal: 0.74 },
-      an2: { total: 28.46, equity: 4.02, dette: 24.44, coutTotal: 1.71 },
-      an3: { total: 46.49, equity: 6.57, dette: 39.92, coutTotal: 2.79 }
+      an1: { total: 6.17, equity: 0.87, dette: 5.30, coutTotal: 0.37 },
+      an2: { total: 14.23, equity: 2.01, dette: 12.22, coutTotal: 0.86 },
+      an3: { total: 23.25, equity: 3.28, dette: 19.97, coutTotal: 1.40 }
     },
     Singapour: {
-      an1: { total: 11.67, equity: 1.61, dette: 9.67, coutTotal: 0.63 },
-      an2: { total: 26.95, equity: 4.61, dette: 22.33, coutTotal: 1.45 },
-      an3: { total: 44.02, equity: 7.53, dette: 36.49, coutTotal: 2.37 }
+      an1: { total: 5.56, equity: 0.81, dette: 4.76, coutTotal: 0.30 },
+      an2: { total: 12.84, equity: 1.86, dette: 10.98, coutTotal: 0.68 },
+      an3: { total: 20.97, equity: 3.04, dette: 17.94, coutTotal: 1.12 }
     },
     Hambourg: {
-      an1: { total: 13.26, equity: 1.85, dette: 11.42, coutTotal: 0.81 },
-      an2: { total: 30.62, equity: 4.26, dette: 26.36, coutTotal: 1.87 },
-      an3: { total: 50.01, equity: 6.96, dette: 43.06, coutTotal: 3.05 }
+      an1: { total: 6.63, equity: 0.93, dette: 5.71, coutTotal: 0.41 },
+      an2: { total: 15.31, equity: 2.13, dette: 13.18, coutTotal: 0.94 },
+      an3: { total: 25.01, equity: 3.48, dette: 21.53, coutTotal: 1.53 }
     },
     Londres: {
-      an1: { total: 11.67, equity: 2.00, dette: 9.67, coutTotal: 0.63 },
-      an2: { total: 26.95, equity: 4.61, dette: 22.33, coutTotal: 1.45 },
-      an3: { total: 44.02, equity: 7.53, dette: 36.49, coutTotal: 2.37 }
+      an1: { total: 5.84, equity: 1.00, dette: 4.84, coutTotal: 0.32 },
+      an2: { total: 13.48, equity: 2.31, dette: 11.17, coutTotal: 0.73 },
+      an3: { total: 22.01, equity: 3.77, dette: 18.24, coutTotal: 1.19 }
     },
     Chypre: {
-      an1: { total: 13.26, equity: 1.85, dette: 11.42, coutTotal: 0.81 },
-      an2: { total: 30.62, equity: 4.26, dette: 26.36, coutTotal: 1.87 },
-      an3: { total: 50.01, equity: 6.96, dette: 43.06, coutTotal: 3.05 }
+      an1: { total: 8.43, equity: 3.13, dette: 5.30, coutTotal: 0.49 },
+      an2: { total: 19.45, equity: 3.61, dette: 15.85, coutTotal: 1.14 },
+      an3: { total: 31.78, equity: 5.90, dette: 25.89, coutTotal: 1.86 }
     },
     Maurice: {
-      an1: { total: 10.50, equity: 1.20, dette: 9.30, coutTotal: 0.55 },
-      an2: { total: 24.25, equity: 2.78, dette: 21.47, coutTotal: 1.25 },
-      an3: { total: 39.60, equity: 4.54, dette: 35.06, coutTotal: 2.04 }
+      an1: { total: 9.41, equity: 3.76, dette: 5.65, coutTotal: 0.62 },
+      an2: { total: 21.72, equity: 4.35, dette: 17.38, coutTotal: 1.42 },
+      an3: { total: 35.48, equity: 7.10, dette: 28.38, coutTotal: 2.32 }
     },
     Andorre: {
-      an1: { total: 10.15, equity: 1.15, dette: 9.00, coutTotal: 0.51 },
-      an2: { total: 23.45, equity: 2.65, dette: 20.80, coutTotal: 1.17 },
-      an3: { total: 38.30, equity: 4.34, dette: 33.96, coutTotal: 1.92 }
+      an1: { total: 8.55, equity: 2.88, dette: 5.67, coutTotal: 0.58 },
+      an2: { total: 19.74, equity: 3.32, dette: 16.42, coutTotal: 1.34 },
+      an3: { total: 32.25, equity: 5.43, dette: 26.82, coutTotal: 2.20 }
     },
     Dubai: {
-      an1: { total: 12.10, equity: 1.70, dette: 10.40, coutTotal: 0.69 },
-      an2: { total: 27.95, equity: 3.94, dette: 24.01, coutTotal: 1.59 },
-      an3: { total: 45.65, equity: 6.43, dette: 39.22, coutTotal: 2.60 }
+      an1: { total: 7.69, equity: 1.30, dette: 6.39, coutTotal: 0.43 },
+      an2: { total: 17.75, equity: 2.99, dette: 14.76, coutTotal: 0.99 },
+      an3: { total: 28.99, equity: 4.89, dette: 24.10, coutTotal: 1.61 }
     },
     'Tel Aviv': {
-      an1: { total: 11.75, equity: 1.65, dette: 10.10, coutTotal: 0.64 },
-      an2: { total: 27.15, equity: 3.82, dette: 23.33, coutTotal: 1.48 },
-      an3: { total: 44.35, equity: 6.25, dette: 38.10, coutTotal: 2.41 }
+      an1: { total: 7.28, equity: 2.17, dette: 5.11, coutTotal: 0.45 },
+      an2: { total: 16.79, equity: 2.51, dette: 14.28, coutTotal: 1.05 },
+      an3: { total: 27.43, equity: 4.10, dette: 23.33, coutTotal: 1.71 }
     },
     'Maroc CFC': {
-      an1: { total: 9.00, equity: 1.00, dette: 8.00, coutTotal: 0.45 },
-      an2: { total: 20.80, equity: 2.31, dette: 18.49, coutTotal: 1.04 },
-      an3: { total: 34.00, equity: 3.78, dette: 30.22, coutTotal: 1.70 }
+      an1: { total: 11.34, equity: 5.67, dette: 5.67, coutTotal: 0.66 },
+      an2: { total: 26.17, equity: 6.55, dette: 19.63, coutTotal: 1.51 },
+      an3: { total: 42.75, equity: 10.69, dette: 32.06, coutTotal: 2.46 }
     }
   };
 
@@ -442,9 +468,15 @@ const Dashboard: React.FC = () => {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">EBITDA An1:</span>
-                    <span className={`font-bold ${ville.ebitdaAn1 >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {ville.ebitdaAn1.toFixed(2)} M€
+                    <span className="text-sm text-gray-600">Financement An1:</span>
+                    <span className="font-bold text-green-600">
+                      {getSgaCashData(ville.nom).cashAn1.toFixed(2)} M€
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">SG&A An1:</span>
+                    <span className="font-bold text-orange-600">
+                      {getSgaCashData(ville.nom).sgaAn1.toFixed(2)} M€
                     </span>
                   </div>
                   <div className="flex justify-between">

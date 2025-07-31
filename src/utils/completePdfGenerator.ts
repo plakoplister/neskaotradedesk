@@ -350,8 +350,8 @@ export class CompletePDFGenerator {
       
       const parisStructureHeaders = ['Catégorie', 'An 1', 'An 2', 'An 3', 'Description'];
       const parisStructureRows = [
-        ['Personnel', '630k€', '710k€', '810k€', '4 FTE → 5.5 FTE, salaires compétitifs'],
-        ['Bureaux', '280k€', '280k€', '280k€', 'La Défense, 115m² → 150m²'],
+        ['Personnel', '320k€', '360k€', '410k€', '2 FTE → 3 FTE, salaires compétitifs'],
+        ['Bureaux', '150k€', '150k€', '150k€', 'La Défense, 60m² → 80m²'],
         ['IT & Systèmes', '150k€', '150k€', '150k€', 'Bloomberg, ICE, risk management'],
         ['Compliance', '80k€', '150k€', '150k€', 'Audit Big4, EUDR, certifications'],
         ['Voyages', '80k€', '80k€', '80k€', 'Relations CI, salons professionnels'],
@@ -399,7 +399,7 @@ export class CompletePDFGenerator {
       
       const parisPlHeaders = ['Poste', 'An 1', 'An 2', 'An 3', 'CAGR'];
       const parisPlRows = [
-        ['Chiffre d\'affaires', '54.16', '132.57', '227.58', '104.99%'],
+        ['Chiffre d\'affaires', '27.08', '66.29', '151.72', '104.99%'],
         ['Marge brute trading', '1.07', '2.62', '4.41', '103.08%'],
         ['Gains spéculation', '0.71', '1.63', '7.14', '217.53%'],
         ['TOTAL REVENUS', '1.78', '4.25', '11.55', '154.92%'],
@@ -408,7 +408,7 @@ export class CompletePDFGenerator {
         ['IT & Systèmes', '0.15', '0.15', '0.15', '0.00%'],
         ['Autres charges', '0.20', '0.27', '0.38', '-'],
         ['TOTAL CHARGES', '1.26', '1.41', '1.62', '13.39%'],
-        ['EBITDA', '0.52', '2.84', '9.93', '13.39%'],
+        ['EBITDA', '0.12', '1.40', '6.81', '10.17%'],
         ['Résultat net', '-0.43', '0.69', '4.88', '-']
       ];
       

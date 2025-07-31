@@ -39,11 +39,11 @@ export class ExhaustivePDFGenerator {
         nom: 'Paris', pays: 'FR', score: 7.87, statut: 'RECOMMANDE', 
         ebitdaAn1: 0.52, equity: 1.89, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 1.26, ebitda: 0.52, rn: -0.43 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 1.41, ebitda: 2.84, rn: 0.69 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 1.62, ebitda: 9.93, rn: 4.88 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 1.26, ebitda: 0.12, rn: -0.88 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 1.41, ebitda: 1.40, rn: -0.04 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 1.62, ebitda: 6.81, rn: 1.73 }
         },
-        sga: { personnel: 8.45, bureaux: 2.10, it: 1.35, compliance: 0.85, voyage: 0.75, setup: 0.35, total: 13.85 },
+        sga: { personnel: 4.29, bureaux: 1.20, it: 1.35, compliance: 0.85, voyage: 0.75, setup: 0.35, total: 8.79 },
         financement: { besoins: 13.73, equity: 1.89, dette: 11.84, cout: 6.5, ratio: 6.27 },
         impact: { proximite: 9, esg: 8, formation: 10, transparence: 9, emplois: 7, influence: 8, partenariats: 8 }
       },
@@ -51,9 +51,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Geneve', pays: 'CH', score: 7.81, statut: 'RECOMMANDE',
         ebitdaAn1: -0.23, equity: 1.78, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 2.01, ebitda: -0.23, rn: -2.18 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 2.26, ebitda: 1.99, rn: -1.16 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 2.46, ebitda: 9.09, rn: 6.63 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 2.01, ebitda: -0.23, rn: -2.18 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 2.26, ebitda: 1.99, rn: -1.16 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 2.46, ebitda: 9.09, rn: 6.63 }
         },
         sga: { personnel: 9.20, bureaux: 2.45, it: 1.35, compliance: 0.95, voyage: 0.68, setup: 0.28, total: 14.91 },
         financement: { besoins: 12.64, equity: 1.78, dette: 10.86, cout: 6.0, ratio: 6.10 },
@@ -63,9 +63,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Amsterdam', pays: 'NL', score: 7.65, statut: 'RECOMMANDE',
         ebitdaAn1: 0.07, equity: 1.74, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 1.71, ebitda: 0.07, rn: -1.68 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 1.86, ebitda: 2.39, rn: 0.64 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 2.15, ebitda: 9.40, rn: 7.25 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 1.71, ebitda: 0.07, rn: -1.68 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 1.86, ebitda: 2.39, rn: 0.64 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 2.15, ebitda: 9.40, rn: 7.25 }
         },
         sga: { personnel: 7.85, bureaux: 1.95, it: 1.35, compliance: 0.75, voyage: 0.82, setup: 0.31, total: 13.03 },
         financement: { besoins: 12.33, equity: 1.74, dette: 10.59, cout: 6.2, ratio: 6.09 },
@@ -75,9 +75,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Singapour', pays: 'SG', score: 7.49, statut: 'POSSIBLE',
         ebitdaAn1: 0.02, equity: 1.61, zone: 'Asie',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 1.76, ebitda: 0.02, rn: -1.73 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 1.91, ebitda: 2.34, rn: 0.61 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 2.15, ebitda: 9.40, rn: 7.27 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 1.76, ebitda: 0.02, rn: -1.73 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 1.91, ebitda: 2.34, rn: 0.61 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 2.15, ebitda: 9.40, rn: 7.27 }
         },
         sga: { personnel: 6.95, bureaux: 2.25, it: 1.25, compliance: 0.65, voyage: 1.15, setup: 0.45, total: 12.70 },
         financement: { besoins: 11.12, equity: 1.61, dette: 9.51, cout: 7.0, ratio: 5.91 },
@@ -87,9 +87,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Hambourg', pays: 'DE', score: 6.78, statut: 'POSSIBLE',
         ebitdaAn1: 0.09, equity: 1.85, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 1.69, ebitda: 0.09, rn: -1.66 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 1.84, ebitda: 2.41, rn: 0.66 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 2.59, ebitda: 8.96, rn: 6.71 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 1.69, ebitda: 0.09, rn: -1.66 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 1.84, ebitda: 2.41, rn: 0.66 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 2.59, ebitda: 8.96, rn: 6.71 }
         },
         sga: { personnel: 7.60, bureaux: 1.75, it: 1.35, compliance: 0.80, voyage: 0.70, setup: 0.25, total: 12.45 },
         financement: { besoins: 13.26, equity: 1.85, dette: 11.41, cout: 6.8, ratio: 6.17 },
@@ -99,9 +99,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Londres', pays: 'GB', score: 6.72, statut: 'POSSIBLE',
         ebitdaAn1: -0.67, equity: 2.00, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 2.45, ebitda: -0.67, rn: -2.42 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 2.70, ebitda: 1.55, rn: -0.20 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 3.08, ebitda: 8.47, rn: 6.35 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 2.45, ebitda: -0.67, rn: -2.42 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 2.70, ebitda: 1.55, rn: -0.20 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 3.08, ebitda: 8.47, rn: 6.35 }
         },
         sga: { personnel: 8.95, bureaux: 2.85, it: 1.45, compliance: 0.90, voyage: 0.65, setup: 0.42, total: 15.22 },
         financement: { besoins: 14.42, equity: 2.00, dette: 12.42, cout: 7.5, ratio: 6.21 },
@@ -111,9 +111,9 @@ export class ExhaustivePDFGenerator {
         nom: 'Chypre', pays: 'CY', score: 6.51, statut: 'POSSIBLE',
         ebitdaAn1: 0.40, equity: 2.38, zone: 'Europe',
         pl: {
-          an1: { ca: 54.16, revenus: 1.78, charges: 1.38, ebitda: 0.40, rn: -1.23 },
-          an2: { ca: 132.57, revenus: 4.25, charges: 1.56, ebitda: 2.69, rn: 1.06 },
-          an3: { ca: 227.58, revenus: 11.55, charges: 1.95, ebitda: 9.60, rn: 8.40 }
+          an1: { ca: 27.08, revenus: 1.78, charges: 1.38, ebitda: 0.40, rn: -1.23 },
+          an2: { ca: 66.29, revenus: 4.25, charges: 1.56, ebitda: 2.69, rn: 1.06 },
+          an3: { ca: 151.72, revenus: 11.55, charges: 1.95, ebitda: 9.60, rn: 8.40 }
         },
         sga: { personnel: 5.45, bureaux: 1.25, it: 1.15, compliance: 0.55, voyage: 0.95, setup: 0.18, total: 9.53 },
         financement: { besoins: 17.33, equity: 2.38, dette: 14.95, cout: 8.5, ratio: 6.28 },
@@ -1257,7 +1257,7 @@ export class ExhaustivePDFGenerator {
     // Performance 3 ans
     const perfHeaders = ['Indicateur', 'An 1', 'An 2', 'An 3', 'Total 3ans', 'Evolution'];
     const perfRows = [
-      ['CA Total (M EUR)', '54.16', '132.57', '227.58', '414.31', '+320%'],
+      ['CA Total (M EUR)', '27.08', '66.29', '151.72', '245.09', '+460%'],
       ['Marge Forward (M EUR)', '1.07', '2.62', '4.41', '8.10', '+312%'],
       ['Marge Futures (M EUR)', '0.71', '1.63', '7.14', '9.48', '+906%'],
       ['Marge Totale (M EUR)', '1.78', '4.25', '11.55', '17.58', '+549%'],
@@ -1425,7 +1425,7 @@ export class ExhaustivePDFGenerator {
     this.currentY += 8;
 
     // DONNEES REELLES DE LA WEBAPP - Bureaux par ville
-    const bureauxHeaders = ['Ville', 'Quartier', 'Cout/m²/an (EUR)', 'Setup (k EUR)', 'Cout An1 115m²'];
+    const bureauxHeaders = ['Ville', 'Quartier', 'Cout/m²/an (EUR)', 'Setup (k EUR)', 'Cout An1 60m²'];
     const bureauxRows = [
       ['Paris', 'La Defense', '650', '250', '75k EUR'],
       ['Geneve', 'Centre-ville', '800', '250', '92k EUR'],
@@ -1558,12 +1558,12 @@ export class ExhaustivePDFGenerator {
     // DONNEES REELLES WEBAPP - P&L Paris 3 ans
     const plHeaders = ['Compte de Resultat', 'An 1', 'An 2', 'An 3', 'Total 3 ans', '% Moy. CA'];
     const plRows = [
-      ['Chiffre d\'affaires', '54.16 M EUR', '132.57 M EUR', '227.58 M EUR', '414.31 M EUR', '100.0%'],
+      ['Chiffre d\'affaires', '27.08 M EUR', '66.29 M EUR', '151.72 M EUR', '245.09 M EUR', '100.0%'],
       ['Marge Trading', '1.07 M EUR', '2.62 M EUR', '4.41 M EUR', '8.10 M EUR', '2.0%'],
       ['Gains Futures', '0.71 M EUR', '1.63 M EUR', '7.14 M EUR', '9.48 M EUR', '2.3%'],
       ['Total Revenus', '1.78 M EUR', '4.25 M EUR', '11.55 M EUR', '17.58 M EUR', '4.2%'],
       ['Total Charges SGA', '1.26 M EUR', '1.41 M EUR', '1.62 M EUR', '4.29 M EUR', '1.0%'],
-      ['EBITDA', '0.52 M EUR', '2.84 M EUR', '9.93 M EUR', '13.29 M EUR', '3.2%'],
+      ['EBITDA', '0.12 M EUR', '1.40 M EUR', '6.81 M EUR', '8.33 M EUR', '3.4%'],
       ['Resultat Net', '-0.43 M EUR', '0.69 M EUR', '4.88 M EUR', '5.14 M EUR', '1.2%']
     ];
 
@@ -2439,8 +2439,8 @@ export class ExhaustivePDFGenerator {
 
     const businessHeaders = ['Metrique', 'An 1', 'An 2', 'An 3', 'Total/Moy', 'Benchmark'];
     const businessRows = [
-      ['Chiffre d\'affaires', '54.2 M EUR', '132.6 M EUR', '227.6 M EUR', '414.3 M EUR', '> objectifs'],
-      ['EBITDA', '0.52 M EUR', '2.84 M EUR', '9.93 M EUR', '13.29 M EUR', '3.2% CA moyen'],
+      ['Chiffre d\'affaires', '27.1 M EUR', '66.3 M EUR', '151.7 M EUR', '245.1 M EUR', '> objectifs'],
+      ['EBITDA', '0.12 M EUR', '1.40 M EUR', '6.81 M EUR', '8.33 M EUR', '3.4% CA moyen'],
       ['Investissement', '1.89 M EUR', '0.85 M EUR', '1.15 M EUR', '3.89 M EUR', 'Capital efficient'],
       ['ROI cumule', '-23%', '+36%', '+172%', '172% sur 3 ans', 'Excellent >150%'],
       ['Payback', '', '', '2.3 ans', '2.3 ans', 'Très bon <3 ans'],

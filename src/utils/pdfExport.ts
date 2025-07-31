@@ -451,13 +451,13 @@ class NeskaoPDFExporter {
 
     const financial: FinancialData = {
       volumes: {
-        an1: { forward: 6490, futures: 0, total: 6490 },
-        an2: { forward: 9735, futures: 3250, total: 12985 },
-        an3: { forward: 14470, futures: 7150, total: 21620 }
+        an1: { forward: 2950, futures: 0, total: 2950 },
+        an2: { forward: 4870, futures: 1630, total: 6500 },
+        an3: { forward: 9750, futures: 4850, total: 14600 }
       },
-      ca: { an1: 54.18, an2: 132.57, an3: 227.58 },
+      ca: { an1: 27.08, an2: 66.29, an3: 151.72 },
       margeTrading: { an1: 1.78, an2: 4.25, an3: 11.31 },
-      ebitda: { an1: 0.40, an2: 2.91, an3: 9.60 }
+      ebitda: { an1: 0.12, an2: 1.40, an3: 6.81 }
     };
 
     const risks: RiskData[] = [

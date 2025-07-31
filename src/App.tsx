@@ -115,19 +115,31 @@ const NeskaoTradeDesk: React.FC = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          {/* Première ligne: Logos et titre */}
+          <div className="flex items-center justify-between h-12 border-b border-gray-100">
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <img 
                   src={neskaroLogo} 
                   alt="Neskao Logo" 
-                  className="h-10 w-auto mr-3"
+                  className="h-8 w-auto mr-3"
                 />
-                <h1 className="text-2xl font-bold text-gray-900">Neskao Trade Desk</h1>
+                <h1 className="text-xl font-bold text-gray-900">Neskao Trade Desk</h1>
               </div>
-              <div className="ml-4 flex items-center">
-                <span className="text-sm text-gray-600">Analyse Stratégique - Confidentiel</span>
-              </div>
+            </div>
+            <div className="flex items-center">
+              <img 
+                src={mereyaLogo} 
+                alt="Mereya Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
+          </div>
+          
+          {/* Deuxième ligne: Analyse Stratégique, Export PDF, Version */}
+          <div className="flex items-center justify-between h-12">
+            <div className="flex items-center">
+              <span className="text-sm text-gray-600 font-medium">Analyse Stratégique - Confidentiel</span>
             </div>
             <div className="flex items-center space-x-4">
               <button
@@ -150,12 +162,7 @@ const NeskaoTradeDesk: React.FC = () => {
                   </>
                 )}
               </button>
-              <span className="text-sm text-gray-500">v3.1</span>
-              <img 
-                src={mereyaLogo} 
-                alt="Mereya Logo" 
-                className="h-10 w-auto"
-              />
+              <span className="text-sm font-semibold text-gray-700 bg-gray-100 px-2 py-1 rounded">V4</span>
             </div>
           </div>
         </div>

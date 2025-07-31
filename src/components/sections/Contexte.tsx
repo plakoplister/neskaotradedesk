@@ -40,8 +40,8 @@ const Contexte: React.FC = () => {
               </div>
               <div className="bg-white p-3 rounded-lg text-center shadow-sm">
                 <p className="text-3xl font-bold text-gray-700">FSSC</p>
-                <p className="text-sm font-semibold">22000 V.5</p>
-                <p className="text-xs text-gray-600">Certifié 2021</p>
+                <p className="text-sm font-semibold">22000 V.6</p>
+                <p className="text-xs text-gray-600">Certifié 2024</p>
               </div>
             </div>
           </div>

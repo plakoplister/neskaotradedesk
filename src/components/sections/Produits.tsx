@@ -30,39 +30,39 @@ const Produits: React.FC = () => {
   // Volumes par produit
   const volumesData: VolumeData[] = [
     { produit: 'Masse de cacao', an1: 0, an2: 0, an3: 0, total: 0 },
-    { produit: 'Beurre standard', an1: 2324, an2: 6042, an3: 10457, total: 18823 },
+    { produit: 'Beurre standard', an1: 1162, an2: 3021, an3: 6971, total: 11154 },
     { produit: 'Beurre désodorisé', an1: 0, an2: 0, an3: 0, total: 0 },
-    { produit: 'Poudre standard', an1: 707, an2: 1837, an3: 3180, total: 5724 },
-    { produit: 'Poudre alcalinisée', an1: 2870, an2: 5739, an3: 8609, total: 17218 }
+    { produit: 'Poudre standard', an1: 353, an2: 919, an3: 2120, total: 3392 },
+    { produit: 'Poudre alcalinisée', an1: 1435, an2: 2870, an3: 5739, total: 10044 }
   ];
 
   // Données financières
   const caMargesData: CaMargeData[] = [
     { 
       annee: 'An 1', 
-      volume: 5899.89, 
-      ca: 54.16, 
-      margeForward: 1.07, 
-      margeFutures: 0.71,
-      margeTotal: 1.78,
+      volume: 2950, 
+      ca: 27.08, 
+      margeForward: 0.534, 
+      margeFutures: 0.354,
+      margeTotal: 0.888,
       margePct: 3.28
     },
     { 
       annee: 'An 2', 
-      volume: 13617.99, 
-      ca: 132.57, 
-      margeForward: 2.62, 
-      margeFutures: 1.63,
-      margeTotal: 4.25,
+      volume: 6809, 
+      ca: 66.29, 
+      margeForward: 1.309, 
+      margeFutures: 0.817,
+      margeTotal: 2.126,
       margePct: 3.21
     },
     { 
       annee: 'An 3', 
-      volume: 22245.21, 
-      ca: 227.58, 
-      margeForward: 4.41, 
-      margeFutures: 7.14,
-      margeTotal: 11.55,
+      volume: 14830, 
+      ca: 151.72, 
+      margeForward: 2.939, 
+      margeFutures: 4.759,
+      margeTotal: 7.698,
       margePct: 5.07
     }
   ];
@@ -225,21 +225,21 @@ const Produits: React.FC = () => {
               <tbody>
                 <tr>
                   <td className="p-2 font-semibold">Masse de cacao</td>
+                  <td className="p-2 text-right">1,519</td>
+                  <td className="p-2 text-right">0</td>
                   <td className="p-2 text-right">3,038</td>
                   <td className="p-2 text-right">0</td>
                   <td className="p-2 text-right">6,075</td>
                   <td className="p-2 text-right">0</td>
-                  <td className="p-2 text-right">9,113</td>
-                  <td className="p-2 text-right">0</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="p-2 font-semibold">Beurre standard</td>
+                  <td className="p-2 text-right">1,162</td>
+                  <td className="p-2 text-right">1,162</td>
+                  <td className="p-2 text-right">1,627</td>
+                  <td className="p-2 text-right">3,021</td>
                   <td className="p-2 text-right">2,324</td>
-                  <td className="p-2 text-right">2,324</td>
-                  <td className="p-2 text-right">3,253</td>
-                  <td className="p-2 text-right">6,042</td>
-                  <td className="p-2 text-right">3,486</td>
-                  <td className="p-2 text-right">10,457</td>
+                  <td className="p-2 text-right">6,971</td>
                 </tr>
                 <tr>
                   <td className="p-2 font-semibold">Beurre désodorisé</td>
@@ -252,30 +252,30 @@ const Produits: React.FC = () => {
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="p-2 font-semibold">Poudre standard</td>
+                  <td className="p-2 text-right">353</td>
+                  <td className="p-2 text-right">353</td>
+                  <td className="p-2 text-right">495</td>
+                  <td className="p-2 text-right">919</td>
                   <td className="p-2 text-right">707</td>
-                  <td className="p-2 text-right">707</td>
-                  <td className="p-2 text-right">989</td>
-                  <td className="p-2 text-right">1,837</td>
-                  <td className="p-2 text-right">1,060</td>
-                  <td className="p-2 text-right">3,180</td>
+                  <td className="p-2 text-right">2,120</td>
                 </tr>
                 <tr>
                   <td className="p-2 font-semibold">Poudre alcalinisée</td>
                   <td className="p-2 text-right">0</td>
+                  <td className="p-2 text-right">1,435</td>
+                  <td className="p-2 text-right">0</td>
                   <td className="p-2 text-right">2,870</td>
                   <td className="p-2 text-right">0</td>
                   <td className="p-2 text-right">5,739</td>
-                  <td className="p-2 text-right">0</td>
-                  <td className="p-2 text-right">8,609</td>
                 </tr>
                 <tr className="font-bold border-t-2">
                   <td className="p-2">Total Forward</td>
-                  <td className="p-2 text-right">6,068</td>
-                  <td className="p-2 text-right">5,900</td>
-                  <td className="p-2 text-right">10,318</td>
-                  <td className="p-2 text-right">13,618</td>
-                  <td className="p-2 text-right">13,658</td>
-                  <td className="p-2 text-right">22,245</td>
+                  <td className="p-2 text-right">3,034</td>
+                  <td className="p-2 text-right">2,950</td>
+                  <td className="p-2 text-right">5,159</td>
+                  <td className="p-2 text-right">6,809</td>
+                  <td className="p-2 text-right">9,105</td>
+                  <td className="p-2 text-right">14,830</td>
                 </tr>
               </tbody>
             </table>
@@ -482,9 +482,9 @@ const Produits: React.FC = () => {
                   ))}
                   <tr className="font-bold border-t">
                     <td className="p-2">Total Forward</td>
-                    <td className="p-2 text-right">5,900</td>
-                    <td className="p-2 text-right">13,618</td>
-                    <td className="p-2 text-right">22,245</td>
+                    <td className="p-2 text-right">{caMargesData[0].volume.toLocaleString()}</td>
+                    <td className="p-2 text-right">{caMargesData[1].volume.toLocaleString()}</td>
+                    <td className="p-2 text-right">{caMargesData[2].volume.toLocaleString()}</td>
                   </tr>
                 </tbody>
               </table>
@@ -504,33 +504,33 @@ const Produits: React.FC = () => {
                 <tbody>
                   <tr className="bg-gray-50/50">
                     <td className="p-2">CA Total (M€)</td>
-                    <td className="p-2 text-right">54.2</td>
-                    <td className="p-2 text-right">132.6</td>
-                    <td className="p-2 text-right">227.6</td>
+                    <td className="p-2 text-right">{caMargesData[0].ca}</td>
+                    <td className="p-2 text-right">{caMargesData[1].ca}</td>
+                    <td className="p-2 text-right">{caMargesData[2].ca}</td>
                   </tr>
                   <tr>
                     <td className="p-2">Marge Forward (M€)</td>
-                    <td className="p-2 text-right">1.07</td>
-                    <td className="p-2 text-right">2.62</td>
-                    <td className="p-2 text-right">4.41</td>
+                    <td className="p-2 text-right">{caMargesData[0].margeForward}</td>
+                    <td className="p-2 text-right">{caMargesData[1].margeForward}</td>
+                    <td className="p-2 text-right">{caMargesData[2].margeForward}</td>
                   </tr>
                   <tr className="bg-gray-50/50">
                     <td className="p-2">Marge Futures (M€)</td>
-                    <td className="p-2 text-right">0.71</td>
-                    <td className="p-2 text-right">1.63</td>
-                    <td className="p-2 text-right">7.14</td>
+                    <td className="p-2 text-right">{caMargesData[0].margeFutures}</td>
+                    <td className="p-2 text-right">{caMargesData[1].margeFutures}</td>
+                    <td className="p-2 text-right">{caMargesData[2].margeFutures}</td>
                   </tr>
                   <tr className="font-bold">
                     <td className="p-2">Marge Totale (M€)</td>
-                    <td className="p-2 text-right">1.78</td>
-                    <td className="p-2 text-right">4.25</td>
-                    <td className="p-2 text-right">11.55</td>
+                    <td className="p-2 text-right">{caMargesData[0].margeTotal}</td>
+                    <td className="p-2 text-right">{caMargesData[1].margeTotal}</td>
+                    <td className="p-2 text-right">{caMargesData[2].margeTotal}</td>
                   </tr>
                   <tr className="bg-blue-50">
                     <td className="p-2">Marge %</td>
-                    <td className="p-2 text-right">3.28%</td>
-                    <td className="p-2 text-right">3.21%</td>
-                    <td className="p-2 text-right">5.07%</td>
+                    <td className="p-2 text-right">{caMargesData[0].margePct}%</td>
+                    <td className="p-2 text-right">{caMargesData[1].margePct}%</td>
+                    <td className="p-2 text-right">{caMargesData[2].margePct}%</td>
                   </tr>
                 </tbody>
               </table>
@@ -542,13 +542,13 @@ const Produits: React.FC = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-50 p-4 rounded">
                 <p className="text-sm text-gray-600 mb-1">Forward Trading</p>
-                <p className="text-2xl font-bold">8.1 M€</p>
-                <p className="text-sm text-gray-500">46% du total</p>
+                <p className="text-2xl font-bold">{(caMargesData[0].margeForward + caMargesData[1].margeForward + caMargesData[2].margeForward).toFixed(1)} M€</p>
+                <p className="text-sm text-gray-500">{Math.round((caMargesData[0].margeForward + caMargesData[1].margeForward + caMargesData[2].margeForward) / (caMargesData[0].margeTotal + caMargesData[1].margeTotal + caMargesData[2].margeTotal) * 100)}% du total</p>
               </div>
               <div className="bg-gray-50 p-4 rounded">
                 <p className="text-sm text-gray-600 mb-1">Futures Trading</p>
-                <p className="text-2xl font-bold">9.5 M€</p>
-                <p className="text-sm text-gray-500">54% du total</p>
+                <p className="text-2xl font-bold">{(caMargesData[0].margeFutures + caMargesData[1].margeFutures + caMargesData[2].margeFutures).toFixed(1)} M€</p>
+                <p className="text-sm text-gray-500">{Math.round((caMargesData[0].margeFutures + caMargesData[1].margeFutures + caMargesData[2].margeFutures) / (caMargesData[0].margeTotal + caMargesData[1].margeTotal + caMargesData[2].margeTotal) * 100)}% du total</p>
               </div>
             </div>
           </div>

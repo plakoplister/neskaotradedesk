@@ -7,18 +7,18 @@ const SGA: React.FC = () => {
 
   // Données complètes des 12 localités (incluant Chypre, excluant Genève LCM)
   const villesData = [
-    { nom: "Maroc CFC", an1: 687.870, an2: 716.538, an3: 971.143, total: 2375.551, rank: 1, zone: "Zone franche" },
-    { nom: "Maurice", an1: 795.190, an2: 820.828, an3: 1086.163, total: 2702.181, rank: 2, zone: "Offshore" },
-    { nom: "Andorre", an1: 873.970, an2: 858.218, an3: 1142.003, total: 2874.191, rank: 3, zone: "Zone franche" },
-    { nom: "Paris", an1: 1290.093, an2: 1218.340, an3: 1478.138, total: 3986.571, rank: 4, zone: "Europe" },
-    { nom: "Hambourg", an1: 1296.200, an2: 1252.598, an3: 1637.593, total: 4186.391, rank: 5, zone: "Europe" },
-    { nom: "Chypre", an1: 1384.000, an2: 1330.000, an3: 1678.000, total: 4392.000, rank: 6, zone: "Europe" },
-    { nom: "Amsterdam", an1: 1338.200, an2: 1318.168, an3: 1697.253, total: 4353.621, rank: 7, zone: "Europe" },
-    { nom: "Dubai", an1: 1407.720, an2: 1330.658, an3: 1713.413, total: 4451.791, rank: 8, zone: "Zone franche" },
-    { nom: "Tel Aviv", an1: 1451.390, an2: 1382.478, an3: 1816.743, total: 4650.611, rank: 9, zone: "Moyen-Orient" },
-    { nom: "Genève", an1: 1631.945, an2: 1501.068, an3: 1928.963, total: 5061.976, rank: 10, zone: "Europe" },
-    { nom: "Singapour", an1: 1754.470, an2: 1675.618, an3: 2142.973, total: 5573.061, rank: 11, zone: "Asie" },
-    { nom: "Londres", an1: 1860.220, an2: 1736.338, an3: 2217.333, total: 5813.891, rank: 12, zone: "Europe" }
+    { nom: "Maroc CFC", an1: 412.000, an2: 430.000, an3: 582.000, total: 1424.000, rank: 1, zone: "Zone franche" },
+    { nom: "Maurice", an1: 477.000, an2: 492.000, an3: 652.000, total: 1621.000, rank: 2, zone: "Offshore" },
+    { nom: "Andorre", an1: 524.000, an2: 515.000, an3: 685.000, total: 1724.000, rank: 3, zone: "Zone franche" },
+    { nom: "Paris", an1: 774.000, an2: 731.000, an3: 887.000, total: 2392.000, rank: 4, zone: "Europe" },
+    { nom: "Hambourg", an1: 778.000, an2: 752.000, an3: 983.000, total: 2513.000, rank: 5, zone: "Europe" },
+    { nom: "Chypre", an1: 830.000, an2: 798.000, an3: 1007.000, total: 2635.000, rank: 6, zone: "Europe" },
+    { nom: "Amsterdam", an1: 803.000, an2: 791.000, an3: 1018.000, total: 2612.000, rank: 7, zone: "Europe" },
+    { nom: "Dubai", an1: 844.000, an2: 798.000, an3: 1028.000, total: 2670.000, rank: 8, zone: "Zone franche" },
+    { nom: "Tel Aviv", an1: 871.000, an2: 829.000, an3: 1090.000, total: 2790.000, rank: 9, zone: "Moyen-Orient" },
+    { nom: "Genève", an1: 979.000, an2: 901.000, an3: 1157.000, total: 3037.000, rank: 10, zone: "Europe" },
+    { nom: "Singapour", an1: 1053.000, an2: 1005.000, an3: 1286.000, total: 3344.000, rank: 11, zone: "Asie" },
+    { nom: "Londres", an1: 1116.000, an2: 1042.000, an3: 1330.000, total: 3488.000, rank: 12, zone: "Europe" }
   ];
 
   // Données ressources humaines
@@ -26,115 +26,115 @@ const SGA: React.FC = () => {
     paris: {
       postes: [
         { titre: "Directeur Général", an1: 1, an2: 1, an3: 1, salaire: 280, description: "Direction stratégique, trading senior et relations clés avec partenaires" },
-        { titre: "Responsable Trading", an1: 1, an2: 1, an3: 1, salaire: 150, description: "Hedging sur ICE Futures et support commercial équipes" },
-        { titre: "Trader Junior", an1: 0, an2: 0.5, an3: 1, salaire: 150, description: "Support trading et développement nouveaux marchés" },
-        { titre: "Risk/Compliance", an1: 1, an2: 1, an3: 1, salaire: 120, description: "Gestion risques (50%) et comptabilité/finance (50%)" },
-        { titre: "Assistant Admin", an1: 1, an2: 1, an3: 1, salaire: 80, description: "Administration, back office et support général" },
-        { titre: "Stagiaire", an1: 0, an2: 0, an3: 0.5, salaire: 60, description: "Support risk management et formation" }
+        { titre: "Responsable Trading", an1: 0, an2: 0.5, an3: 0.5, salaire: 150, description: "Hedging sur ICE Futures et support commercial équipes" },
+        { titre: "Trader Junior", an1: 0, an2: 0, an3: 0.5, salaire: 150, description: "Support trading et développement nouveaux marchés" },
+        { titre: "Risk/Compliance", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 120, description: "Gestion risques (50%) et comptabilité/finance (50%)" },
+        { titre: "Assistant Admin", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 80, description: "Administration, back office et support général" },
+        { titre: "Stagiaire", an1: 0, an2: 0, an3: 0, salaire: 60, description: "Support risk management et formation" }
       ],
-      totalFTE: { an1: 4, an2: 4.5, an3: 5.5 }
+      totalFTE: { an1: 2, an2: 2.5, an3: 3 }
     },
     geneve: {
       postes: [
         { titre: "Managing Director", an1: 1, an2: 1, an3: 1, salaire: 350, description: "Direction générale et développement stratégique" },
-        { titre: "Head Trader", an1: 1, an2: 1, an3: 1, salaire: 195, description: "Trading senior et gestion portefeuille" },
-        { titre: "Junior Trader", an1: 0, an2: 0.5, an3: 1, salaire: 234, description: "Exécution trades et analyse marchés" },
-        { titre: "Risk Manager", an1: 1, an2: 1, an3: 1.5, salaire: 156, description: "Gestion risques et reporting réglementaire" },
-        { titre: "Finance/Admin", an1: 1, an2: 1, an3: 1, salaire: 104, description: "Comptabilité, finance et administration" }
+        { titre: "Head Trader", an1: 0, an2: 0.5, an3: 0.5, salaire: 195, description: "Trading senior et gestion portefeuille" },
+        { titre: "Junior Trader", an1: 0, an2: 0, an3: 0.5, salaire: 234, description: "Exécution trades et analyse marchés" },
+        { titre: "Risk Manager", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 156, description: "Gestion risques et reporting réglementaire" },
+        { titre: "Finance/Admin", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 104, description: "Comptabilité, finance et administration" }
       ],
-      totalFTE: { an1: 4, an2: 4.5, an3: 5.5 }
+      totalFTE: { an1: 2, an2: 2.5, an3: 3 }
     },
     amsterdam: {
       postes: [
         { titre: "Directeur", an1: 1, an2: 1, an3: 1, salaire: 308, description: "Direction et relations écosystème cacao NL" },
-        { titre: "Trader/Analyst", an1: 1, an2: 1, an3: 1, salaire: 165, description: "Trading et analyse fondamentaux marché" },
-        { titre: "Traders Junior", an1: 0, an2: 0.5, an3: 1, salaire: 198, description: "Support trading et développement" },
-        { titre: "Risk/Compliance/Finance", an1: 1, an2: 1, an3: 1.5, salaire: 132, description: "Fonctions support intégrées" },
-        { titre: "Assistant Admin", an1: 1, an2: 1, an3: 1, salaire: 88, description: "Support administratif et logistique" }
+        { titre: "Trader/Analyst", an1: 0, an2: 0.5, an3: 0.5, salaire: 165, description: "Trading et analyse fondamentaux marché" },
+        { titre: "Traders Junior", an1: 0, an2: 0, an3: 0.5, salaire: 198, description: "Support trading et développement" },
+        { titre: "Risk/Compliance/Finance", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 132, description: "Fonctions support intégrées" },
+        { titre: "Assistant Admin", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 88, description: "Support administratif et logistique" }
       ],
-      totalFTE: { an1: 4, an2: 4.5, an3: 5.5 }
+      totalFTE: { an1: 2, an2: 2.5, an3: 3 }
     },
     chypre: {
       postes: [
         { titre: "Managing Director", an1: 1, an2: 1, an3: 1, salaire: 300, description: "Direction et développement marché méditerranéen" },
-        { titre: "Senior Trader", an1: 1, an2: 1, an3: 1, salaire: 170, description: "Trading et gestion positions Europe de l'Est" },
-        { titre: "Junior Trader", an1: 0, an2: 0.5, an3: 1, salaire: 200, description: "Support trading et analyse" },
-        { titre: "Risk/Compliance", an1: 1, an2: 1, an3: 1.5, salaire: 140, description: "Conformité UE et gestion risques" },
-        { titre: "Finance/Admin", an1: 1, an2: 1, an3: 1, salaire: 90, description: "Administration et comptabilité" }
+        { titre: "Senior Trader", an1: 0, an2: 0.5, an3: 0.5, salaire: 170, description: "Trading et gestion positions Europe de l'Est" },
+        { titre: "Junior Trader", an1: 0, an2: 0, an3: 0.5, salaire: 200, description: "Support trading et analyse" },
+        { titre: "Risk/Compliance", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 140, description: "Conformité UE et gestion risques" },
+        { titre: "Finance/Admin", an1: 0.5, an2: 0.5, an3: 0.5, salaire: 90, description: "Administration et comptabilité" }
       ],
-      totalFTE: { an1: 4, an2: 4.5, an3: 5.5 }
+      totalFTE: { an1: 2, an2: 2.5, an3: 3 }
     }
   };
 
   // Données bureaux
   const bureauxData = {
     evolution: {
-      an1: 115,
-      an2: 130,
-      an3: 150
+      an1: 60,
+      an2: 70,
+      an3: 80
     },
     localites: [
       { 
         ville: "Paris", 
         quartier: "La Défense", 
         coutM2: 650, 
-        setup: 250,
+        setup: 150,
         description: "Quartier d'affaires principal, proximité banques et institutions"
       },
       { 
         ville: "Genève", 
         quartier: "Centre-ville", 
         coutM2: 800, 
-        setup: 250,
+        setup: 219,
         description: "Quartier financier historique, prestige et réseau trading"
       },
       { 
         ville: "Amsterdam", 
         quartier: "Zuidas", 
         coutM2: 870, 
-        setup: 220,
+        setup: 128,
         description: "Nouveau CBD, proximité port et acteurs cacao"
       },
       { 
         ville: "Chypre", 
         quartier: "Limassol Business District", 
         coutM2: 600, 
-        setup: 250,
+        setup: 164,
         description: "Hub services financiers, proximité port méditerranéen"
       },
       { 
         ville: "Londres", 
         quartier: "City", 
         coutM2: 1300, 
-        setup: 400,
+        setup: 259,
         description: "Centre financier mondial, accès direct ICE Futures"
       },
       { 
         ville: "Hambourg", 
         quartier: "HafenCity", 
         coutM2: 580, 
-        setup: 200,
+        setup: 150,
         description: "Quartier portuaire moderne, hub logistique européen"
       },
       { 
         ville: "Singapour", 
         quartier: "CBD", 
         coutM2: 950, 
-        setup: 320,
+        setup: 255,
         description: "Centre financier Asie, régulation MAS favorable"
       },
       { 
         ville: "Dubai", 
         quartier: "DIFC", 
         coutM2: 800, 
-        setup: 280,
+        setup: 132,
         description: "Zone franche financière, 0% taxe, hub MENA"
       },
       { 
         ville: "Maroc CFC", 
         quartier: "Casablanca Finance City", 
         coutM2: 300, 
-        setup: 150,
+        setup: 74,
         description: "Zone franche africaine, proximité Afrique de l'Ouest"
       }
     ]
@@ -274,8 +274,8 @@ const SGA: React.FC = () => {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-sm">
-            <li>• <strong>Montée en charge progressive:</strong> 4 FTE en An1 → 5.5 FTE en An3 pour toutes les localisations</li>
-            <li>• <strong>Structure identique:</strong> 1 dirigeant + 2-3 traders + 1-2 support dans chaque bureau</li>
+            <li>• <strong>Montée en charge progressive:</strong> 2 FTE en An1 → 3 FTE en An3 pour toutes les localisations</li>
+            <li>• <strong>Structure identique:</strong> 1 dirigeant + 0.5-1 trader + 0.5-1 support dans chaque bureau</li>
             <li>• <strong>Écarts salariaux significatifs:</strong> Genève +25% vs Paris, Amsterdam intermédiaire</li>
             <li>• <strong>Flexibilité:</strong> Recrutement progressif des juniors selon croissance volumes</li>
           </ul>
@@ -325,7 +325,7 @@ const SGA: React.FC = () => {
                   <th className="p-2 text-left">Quartier</th>
                   <th className="p-2 text-right">Coût/m²/an</th>
                   <th className="p-2 text-right">Setup (k€)</th>
-                  <th className="p-2 text-right">Coût An1 (115m²)</th>
+                  <th className="p-2 text-right">Coût An1 (60m²)</th>
                 </tr>
               </thead>
               <tbody>
@@ -335,7 +335,7 @@ const SGA: React.FC = () => {
                     <td className="p-2">{loc.quartier}</td>
                     <td className="p-2 text-right">{loc.coutM2}€</td>
                     <td className="p-2 text-right">{loc.setup}</td>
-                    <td className="p-2 text-right font-semibold">{((loc.coutM2 * 115) / 1000).toFixed(0)}k€</td>
+                    <td className="p-2 text-right font-semibold">{((loc.coutM2 * 60) / 1000).toFixed(0)}k€</td>
                   </tr>
                 ))}
               </tbody>
@@ -463,7 +463,7 @@ const SGA: React.FC = () => {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm">
-              <li><strong>1. Maroc CFC:</strong> 2,376k€</li>
+              <li><strong>1. Maroc CFC:</strong> 1,424k€</li>
               <li><strong>2. Maurice:</strong> 2,702k€</li>
               <li><strong>3. Andorre:</strong> 2,874k€</li>
             </ul>
@@ -479,7 +479,7 @@ const SGA: React.FC = () => {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2 text-sm">
-              <li><strong>4. Paris:</strong> 3,987k€</li>
+              <li><strong>4. Paris:</strong> 2,392k€</li>
               <li><strong>5. Hambourg:</strong> 4,186k€</li>
               <li><strong>6. Chypre:</strong> 4,392k€</li>
               <li><strong>7. Amsterdam:</strong> 4,354k€</li>
@@ -515,7 +515,7 @@ const SGA: React.FC = () => {
             <div className="p-4 bg-blue-100 rounded-lg">
               <h4 className="font-bold mb-2">🎯 Recommandation principale: PARIS</h4>
               <p className="text-sm">
-                Pour Neskao, Paris offre le meilleur compromis avec un coût total de 3,987k€ sur 3 ans:
+                Pour Neskao, Paris offre le meilleur compromis avec un coût total de 2,392k€ sur 3 ans:
               </p>
               <ul className="mt-2 space-y-1 text-sm">
                 <li>✓ Meilleur score B en Europe (21% moins cher que Genève)</li>
@@ -529,7 +529,7 @@ const SGA: React.FC = () => {
             <div className="p-4 bg-green-100 rounded-lg">
               <h4 className="font-bold mb-2">🌍 Alternative low-cost: MAROC CFC</h4>
               <p className="text-sm">
-                Si la priorité absolue est la réduction des coûts (2,376k€ sur 3 ans):
+                Si la priorité absolue est la réduction des coûts (1,424k€ sur 3 ans):
               </p>
               <ul className="mt-2 space-y-1 text-sm">
                 <li>✓ 40% moins cher que Paris</li>
@@ -568,7 +568,7 @@ const SGA: React.FC = () => {
             <CardTitle className="text-sm text-teal-800">Coût minimum</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-teal-900">2,376k€</p>
+            <p className="text-2xl font-bold text-teal-900">1,424k€</p>
             <p className="text-sm text-teal-700">Maroc CFC (3 ans)</p>
           </CardContent>
         </Card>
@@ -578,7 +578,7 @@ const SGA: React.FC = () => {
             <CardTitle className="text-sm text-sky-800">Recommandé</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-sky-900">3,987k€</p>
+            <p className="text-2xl font-bold text-sky-900">2,392k€</p>
             <p className="text-sm text-sky-700">Paris (3 ans)</p>
           </CardContent>
         </Card>
@@ -598,7 +598,7 @@ const SGA: React.FC = () => {
             <CardTitle className="text-sm text-gray-800">Effectifs An3</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-gray-900">5.5 FTE</p>
+            <p className="text-2xl font-bold text-gray-900">3 FTE</p>
             <p className="text-sm text-gray-700">Toutes localisations</p>
           </CardContent>
         </Card>

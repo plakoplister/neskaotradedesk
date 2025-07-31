@@ -3,7 +3,8 @@
     "allow": [
       "Bash(zip:*)",
       "Bash(npm run build:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git add:*)"
     ]
   },
   "enableAllProjectMcpServers": false

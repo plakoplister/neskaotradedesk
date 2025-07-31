@@ -158,86 +158,86 @@ const Financement: React.FC = () => {
     {
       ville: 'Paris',
       ranking: 5,
-      an1: { forward: 8.52, futures: 5.20, equity: 1.89, dette: 11.84, frais: 0.85, total: 13.73 },
-      an2: { forward: 19.68, futures: 12.01, equity: 4.37, dette: 27.32, frais: 1.96, total: 31.69 },
-      an3: { forward: 32.14, futures: 19.62, equity: 7.14, dette: 44.63, frais: 3.20, total: 51.77 }
+      an1: { forward: 4.26, futures: 2.60, equity: 0.95, dette: 5.92, frais: 0.43, total: 6.87 },
+      an2: { forward: 9.84, futures: 6.01, equity: 2.19, dette: 13.66, frais: 0.98, total: 15.85 },
+      an3: { forward: 16.07, futures: 9.81, equity: 3.57, dette: 22.32, frais: 1.60, total: 25.89 }
     },
     {
       ville: 'Genève',
       ranking: 3,
-      an1: { forward: 7.44, futures: 5.20, equity: 1.78, dette: 10.86, frais: 0.73, total: 12.64 },
-      an2: { forward: 17.17, futures: 12.01, equity: 4.12, dette: 25.07, frais: 1.68, total: 29.19 },
-      an3: { forward: 28.05, futures: 19.62, equity: 6.73, dette: 40.95, frais: 2.74, total: 47.68 }
+      an1: { forward: 3.72, futures: 2.60, equity: 0.89, dette: 5.43, frais: 0.37, total: 6.32 },
+      an2: { forward: 8.59, futures: 6.01, equity: 2.06, dette: 12.54, frais: 0.84, total: 14.60 },
+      an3: { forward: 14.03, futures: 9.81, equity: 3.37, dette: 20.48, frais: 1.37, total: 23.84 }
     },
     {
       ville: 'Amsterdam',
       ranking: 2,
-      an1: { forward: 7.26, futures: 5.07, equity: 1.74, dette: 10.59, frais: 0.74, total: 12.33 },
-      an2: { forward: 16.76, futures: 11.70, equity: 4.02, dette: 24.44, frais: 1.71, total: 28.46 },
-      an3: { forward: 27.38, futures: 19.11, equity: 6.56, dette: 39.93, frais: 2.79, total: 46.49 }
+      an1: { forward: 3.63, futures: 2.54, equity: 0.87, dette: 5.30, frais: 0.37, total: 6.17 },
+      an2: { forward: 8.38, futures: 5.85, equity: 2.01, dette: 12.22, frais: 0.86, total: 14.23 },
+      an3: { forward: 13.69, futures: 9.56, equity: 3.28, dette: 19.97, frais: 1.40, total: 23.25 }
     },
     {
       ville: 'Londres',
       ranking: 6,
-      an1: { forward: 6.70, futures: 4.98, equity: 2.00, dette: 9.67, frais: 0.63, total: 11.67 },
-      an2: { forward: 15.46, futures: 11.49, equity: 4.62, dette: 22.33, frais: 1.45, total: 26.95 },
-      an3: { forward: 25.25, futures: 18.77, equity: 7.54, dette: 36.48, frais: 2.37, total: 44.02 }
+      an1: { forward: 3.35, futures: 2.49, equity: 1.00, dette: 4.84, frais: 0.32, total: 5.84 },
+      an2: { forward: 7.73, futures: 5.75, equity: 2.31, dette: 11.17, frais: 0.73, total: 13.48 },
+      an3: { forward: 12.63, futures: 9.39, equity: 3.77, dette: 18.24, frais: 1.19, total: 22.01 }
     },
     {
       ville: 'Hambourg',
       ranking: 4,
-      an1: { forward: 8.06, futures: 5.20, equity: 1.85, dette: 11.42, frais: 0.81, total: 13.26 },
-      an2: { forward: 18.60, futures: 12.01, equity: 4.26, dette: 26.35, frais: 1.87, total: 30.62 },
-      an3: { forward: 30.39, futures: 19.62, equity: 6.96, dette: 43.05, frais: 3.05, total: 50.01 }
+      an1: { forward: 4.03, futures: 2.60, equity: 0.93, dette: 5.71, frais: 0.41, total: 6.63 },
+      an2: { forward: 9.30, futures: 6.01, equity: 2.13, dette: 13.18, frais: 0.94, total: 15.31 },
+      an3: { forward: 15.20, futures: 9.81, equity: 3.48, dette: 21.53, frais: 1.53, total: 25.01 }
     },
     {
       ville: 'Andorre',
       ranking: 9,
-      an1: { forward: 10.88, futures: 6.22, equity: 2.88, dette: 14.23, frais: 1.16, total: 17.10 },
-      an2: { forward: 25.11, futures: 14.36, equity: 6.64, dette: 32.84, frais: 2.68, total: 39.48 },
-      an3: { forward: 41.03, futures: 23.46, equity: 10.85, dette: 53.64, frais: 4.39, total: 64.49 }
+      an1: { forward: 5.44, futures: 3.11, equity: 1.44, dette: 7.12, frais: 0.58, total: 8.55 },
+      an2: { forward: 12.56, futures: 7.18, equity: 3.32, dette: 16.42, frais: 1.34, total: 19.74 },
+      an3: { forward: 20.52, futures: 11.73, equity: 5.43, dette: 26.82, frais: 2.20, total: 32.25 }
     },
     {
       ville: 'Chypre',
       ranking: 8,
-      an1: { forward: 10.88, futures: 5.97, equity: 3.13, dette: 13.73, frais: 0.98, total: 16.86 },
-      an2: { forward: 25.11, futures: 13.79, equity: 7.21, dette: 31.69, frais: 2.27, total: 38.90 },
-      an3: { forward: 41.03, futures: 22.53, equity: 11.79, dette: 51.77, frais: 3.71, total: 63.55 }
+      an1: { forward: 5.44, futures: 2.99, equity: 1.57, dette: 6.87, frais: 0.49, total: 8.43 },
+      an2: { forward: 12.56, futures: 6.90, equity: 3.61, dette: 15.85, frais: 1.14, total: 19.45 },
+      an3: { forward: 20.52, futures: 11.27, equity: 5.90, dette: 25.89, frais: 1.86, total: 31.78 }
     },
     {
       ville: 'Maurice',
       ranking: 10,
-      an1: { forward: 12.05, futures: 6.77, equity: 3.76, dette: 15.06, frais: 1.23, total: 18.82 },
-      an2: { forward: 27.82, futures: 15.62, equity: 8.69, dette: 34.75, frais: 2.84, total: 43.44 },
-      an3: { forward: 45.44, futures: 25.51, equity: 14.19, dette: 56.76, frais: 4.64, total: 70.96 }
+      an1: { forward: 6.03, futures: 3.39, equity: 1.88, dette: 7.53, frais: 0.62, total: 9.41 },
+      an2: { forward: 13.91, futures: 7.81, equity: 4.35, dette: 17.38, frais: 1.42, total: 21.72 },
+      an3: { forward: 22.72, futures: 12.76, equity: 7.10, dette: 28.38, frais: 2.32, total: 35.48 }
     },
     {
       ville: 'Maroc CFC',
       ranking: 11,
-      an1: { forward: 14.76, futures: 7.92, equity: 5.67, dette: 17.01, frais: 1.31, total: 22.68 },
-      an2: { forward: 34.06, futures: 18.28, equity: 13.09, dette: 39.26, frais: 3.01, total: 52.34 },
-      an3: { forward: 55.64, futures: 29.86, equity: 21.37, dette: 64.12, frais: 4.92, total: 85.50 }
+      an1: { forward: 7.38, futures: 3.96, equity: 2.84, dette: 8.51, frais: 0.66, total: 11.34 },
+      an2: { forward: 17.03, futures: 9.14, equity: 6.55, dette: 19.63, frais: 1.51, total: 26.17 },
+      an3: { forward: 27.82, futures: 14.93, equity: 10.69, dette: 32.06, frais: 2.46, total: 42.75 }
     },
     {
       ville: 'Dubai',
       ranking: 7,
-      an1: { forward: 9.67, futures: 5.70, equity: 2.59, dette: 12.78, frais: 0.85, total: 15.37 },
-      an2: { forward: 22.32, futures: 13.16, equity: 5.98, dette: 29.51, frais: 1.97, total: 35.49 },
-      an3: { forward: 36.47, futures: 21.50, equity: 9.77, dette: 48.20, frais: 3.22, total: 57.97 }
+      an1: { forward: 4.84, futures: 2.85, equity: 1.30, dette: 6.39, frais: 0.43, total: 7.69 },
+      an2: { forward: 11.16, futures: 6.58, equity: 2.99, dette: 14.76, frais: 0.99, total: 17.75 },
+      an3: { forward: 18.24, futures: 10.75, equity: 4.89, dette: 24.10, frais: 1.61, total: 28.99 }
     },
     {
       ville: 'Tel Aviv',
       ranking: 12,
-      an1: { forward: 9.21, futures: 5.34, equity: 2.17, dette: 12.37, frais: 0.90, total: 14.55 },
-      an2: { forward: 21.25, futures: 12.33, equity: 5.02, dette: 28.56, frais: 2.09, total: 33.58 },
-      an3: { forward: 34.71, futures: 20.14, equity: 8.19, dette: 46.65, frais: 3.41, total: 54.85 }
+      an1: { forward: 4.61, futures: 2.67, equity: 1.09, dette: 6.19, frais: 0.45, total: 7.28 },
+      an2: { forward: 10.63, futures: 6.17, equity: 2.51, dette: 14.28, frais: 1.05, total: 16.79 },
+      an3: { forward: 17.36, futures: 10.07, equity: 4.10, dette: 23.33, frais: 1.71, total: 27.43 }
     },
     {
       ville: 'Singapour',
       ranking: 1,
-      an1: { forward: 6.15, futures: 4.98, equity: 1.61, dette: 9.51, frais: 0.59, total: 11.12 },
-      an2: { forward: 14.18, futures: 11.49, equity: 3.72, dette: 21.96, frais: 1.36, total: 25.68 },
-      an3: { forward: 23.17, futures: 18.77, equity: 6.07, dette: 35.87, frais: 2.23, total: 41.94 }
+      an1: { forward: 3.08, futures: 2.49, equity: 0.81, dette: 4.76, frais: 0.30, total: 5.56 },
+      an2: { forward: 7.09, futures: 5.75, equity: 1.86, dette: 10.98, frais: 0.68, total: 12.84 },
+      an3: { forward: 11.59, futures: 9.39, equity: 3.04, dette: 17.94, frais: 1.12, total: 20.97 }
     }
   ];
 
@@ -298,9 +298,9 @@ const Financement: React.FC = () => {
             <div className="bg-teal-50/30 p-4 rounded-lg">
               <h4 className="font-semibold mb-2">Volumes à financer</h4>
               <ul className="space-y-1 text-sm">
-                <li>• <strong>An1:</strong> Hedge: <strong>5,900 T</strong> / Spec: <strong>590 T</strong></li>
-                <li>• <strong>An2:</strong> Hedge: <strong>13,618 T</strong> / Spec: <strong>1,362 T</strong></li>
-                <li>• <strong>An3:</strong> Hedge: <strong>22,245 T</strong> / Spec: <strong>2,225 T</strong></li>
+                <li>• <strong>An1:</strong> Hedge: <strong>2,950 T</strong> / Spec: <strong>295 T</strong></li>
+                <li>• <strong>An2:</strong> Hedge: <strong>6,809 T</strong> / Spec: <strong>681 T</strong></li>
+                <li>• <strong>An3:</strong> Hedge: <strong>14,830 T</strong> / Spec: <strong>1,483 T</strong></li>
               </ul>
             </div>
             <div className="bg-gray-100 p-4 rounded-lg">
@@ -613,7 +613,7 @@ const Financement: React.FC = () => {
                 <div key={index} className="border-l-4 border-blue-500 pl-4">
                   <h4 className="font-semibold text-blue-700">#{ville.ranking} {ville.ville}</h4>
                   <p className="text-sm text-gray-600 mt-1">
-                    {ville.ville === 'Singapour' && 'Financement minimum requis (11.12 M€), excellents taux (6-6.5%), accès IFC excellent'}
+                    {ville.ville === 'Singapour' && 'Financement minimum requis (5.56 M€), excellents taux (6-6.5%), accès IFC excellent'}
                     {ville.ville === 'Amsterdam' && 'Structure équilibrée, accès FMO excellent, hub européen du cacao'}
                     {ville.ville === 'Genève' && 'Meilleurs scores DFI (10/10), taux compétitifs, centre financier mondial'}
                     {ville.ville === 'Hambourg' && 'Port principal européen, bonne structure de coûts, accès direct marché'}
@@ -735,7 +735,7 @@ const Financement: React.FC = () => {
                 <li className="flex items-start">
                   <span className="font-bold text-indigo-600 mr-2">1.</span>
                   <div>
-                    <strong>Singapour</strong> : Besoins minimaux (11.12 M€) et taux attractifs pour démarrage rapide
+                    <strong>Singapour</strong> : Besoins minimaux (5.56 M€) et taux attractifs pour démarrage rapide
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -747,7 +747,7 @@ const Financement: React.FC = () => {
                 <li className="flex items-start">
                   <span className="font-bold text-indigo-600 mr-2">3.</span>
                   <div>
-                    <strong>Éviter</strong> : Maroc CFC (22.68 M€ An1) et Maurice malgré avantages fiscaux
+                    <strong>Éviter</strong> : Maroc CFC (11.34 M€ An1) et Maurice malgré avantages fiscaux
                   </div>
                 </li>
               </ol>
@@ -756,15 +756,15 @@ const Financement: React.FC = () => {
             <div className="grid grid-cols-3 gap-3 text-center">
               <div className="bg-teal-100/50 p-3 rounded">
                 <p className="text-xs text-green-600">Equity moyen Top 5 An1</p>
-                <p className="text-xl font-bold text-green-800">1.99 M€</p>
+                <p className="text-xl font-bold text-green-800">0.89 M€</p>
               </div>
               <div className="bg-sky-100/50 p-3 rounded">
                 <p className="text-xs text-blue-600">Financement total moyen An3</p>
-                <p className="text-xl font-bold text-blue-800">48.0 M€</p>
+                <p className="text-xl font-bold text-blue-800">23.8 M€</p>
               </div>
               <div className="bg-gray-100 p-3 rounded">
                 <p className="text-xs text-purple-600">Taux moyen Top 5</p>
-                <p className="text-xl font-bold text-purple-800">6.8%</p>
+                <p className="text-xl font-bold text-purple-800">6.6%</p>
               </div>
             </div>
           </div>

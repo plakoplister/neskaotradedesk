@@ -2,49 +2,49 @@ import { EbitdaData, EvolutionData, ScoreData, VolumeData, CaMargeData, KpiData 
 
 // EBITDA data for all cities (in millions EUR)
 export const ebitdaData: EbitdaData[] = [
-  { ville: 'Paris', an1: 0.52, an2: 2.84, an3: 9.93, roi3ans: 171.6, irr: 38, payback: 2.3 },
-  { ville: 'Genève', an1: -0.23, an2: 2.34, an3: 9.09, roi3ans: 187.5, irr: 40, payback: 2.5 },
-  { ville: 'Amsterdam', an1: 0.07, an2: 2.56, an3: 9.40, roi3ans: 176.8, irr: 39, payback: 2.4 },
-  { ville: 'Londres', an1: -0.67, an2: 1.86, an3: 8.47, roi3ans: 133.4, irr: 32, payback: 2.8 },
-  { ville: 'Chypre', an1: -0.06, an2: 2.59, an3: 9.33, roi3ans: 165.0, irr: 37, payback: 2.4 },
-  { ville: 'Hambourg', an1: 0.09, an2: 2.57, an3: 9.38, roi3ans: 141.9, irr: 34, payback: 2.6 },
-  { ville: 'Andorre', an1: 0.76, an2: 3.25, an3: 10.25, roi3ans: 120.1, irr: 30, payback: 2.2 },
-  { ville: 'Maurice', an1: 0.82, an2: 3.29, an3: 10.29, roi3ans: 104.4, irr: 28, payback: 2.1 },
-  { ville: 'Maroc CFC', an1: 0.93, an2: 3.40, an3: 10.43, roi3ans: 95.2, irr: 25, payback: 2.0 },
-  { ville: 'Dubai', an1: 0.00, an2: 2.52, an3: 9.31, roi3ans: 149.0, irr: 35, payback: 2.7 },
-  { ville: 'Tel Aviv', an1: -0.06, an2: 2.44, an3: 9.16, roi3ans: 101.8, irr: 27, payback: 2.8 },
-  { ville: 'Singapour', an1: 0.02, an2: 2.58, an3: 9.40, roi3ans: 200.0, irr: 42, payback: 2.5 },
-  { ville: 'Casablanca', an1: 0.45, an2: 2.95, an3: 9.85, roi3ans: 155.0, irr: 36, payback: 2.3 }
+  { ville: 'Paris', an1: 0.12, an2: 1.40, an3: 6.81, roi3ans: 543.2, irr: 65, payback: 1.8 },
+  { ville: 'Genève', an1: -0.09, an2: 1.23, an3: 6.54, roi3ans: 570.8, irr: 68, payback: 1.9 },
+  { ville: 'Amsterdam', an1: 0.04, an2: 1.34, an3: 6.68, roi3ans: 595.4, irr: 70, payback: 1.7 },
+  { ville: 'Londres', an1: -0.34, an2: 1.09, an3: 6.37, roi3ans: 473.0, irr: 58, payback: 2.1 },
+  { ville: 'Chypre', an1: 0.20, an2: 1.33, an3: 6.65, roi3ans: 394.1, irr: 55, payback: 1.9 },
+  { ville: 'Hambourg', an1: 0.05, an2: 1.38, an3: 6.72, roi3ans: 547.3, irr: 66, payback: 1.8 },
+  { ville: 'Andorre', an1: 0.38, an2: 1.61, an3: 7.01, roi3ans: 319.4, irr: 48, payback: 1.6 },
+  { ville: 'Maurice', an1: 0.41, an2: 1.64, an3: 7.05, roi3ans: 234.0, irr: 42, payback: 1.5 },
+  { ville: 'Maroc CFC', an1: 0.47, an2: 1.70, an3: 7.12, roi3ans: 147.2, irr: 35, payback: 1.4 },
+  { ville: 'Dubai', an1: 0.00, an2: 1.33, an3: 6.67, roi3ans: 342.3, irr: 52, payback: 2.0 },
+  { ville: 'Tel Aviv', an1: -0.03, an2: 1.30, an3: 6.61, roi3ans: 384.4, irr: 54, payback: 2.0 },
+  { ville: 'Singapour', an1: 0.01, an2: 1.12, an3: 6.41, roi3ans: 642.0, irr: 75, payback: 1.6 },
+  { ville: 'Casablanca', an1: 0.24, an2: 1.48, an3: 6.92, roi3ans: 456.0, irr: 60, payback: 1.7 }
 ];
 
 // Evolution data for EBITDA charts
 export const evolutionData: EvolutionData[] = [
   { 
     annee: 'An 1', 
-    Paris: 0.52, 
-    Genève: -0.23, 
-    Amsterdam: 0.07,
-    Londres: -0.67,
-    Chypre: -0.06,
-    Singapour: 0.02
+    Paris: 0.12, 
+    Genève: -0.09, 
+    Amsterdam: 0.04,
+    Londres: -0.34,
+    Chypre: 0.20,
+    Singapour: 0.01
   },
   { 
     annee: 'An 2', 
-    Paris: 2.84, 
-    Genève: 2.34, 
-    Amsterdam: 2.56,
-    Londres: 1.86,
-    Chypre: 2.59,
-    Singapour: 2.58
+    Paris: 1.40, 
+    Genève: 1.23, 
+    Amsterdam: 1.34,
+    Londres: 1.09,
+    Chypre: 1.33,
+    Singapour: 1.12
   },
   { 
     annee: 'An 3', 
-    Paris: 9.93, 
-    Genève: 9.09, 
-    Amsterdam: 9.40,
-    Londres: 8.47,
-    Chypre: 9.33,
-    Singapour: 9.40
+    Paris: 6.81, 
+    Genève: 6.54, 
+    Amsterdam: 6.68,
+    Londres: 6.37,
+    Chypre: 6.65,
+    Singapour: 6.41
   }
 ];
 
@@ -67,39 +67,39 @@ export const scoresData: ScoreData[] = [
 // Volume data for cocoa products (in tonnes)
 export const volumesData: VolumeData[] = [
   { produit: 'Masse de cacao', an1: 0, an2: 0, an3: 0, total: 0 },
-  { produit: 'Beurre standard', an1: 2323.69, an2: 6041.59, an3: 10456.59, total: 18821.87 },
+  { produit: 'Beurre standard', an1: 1162, an2: 3021, an3: 6971, total: 11154 },
   { produit: 'Beurre désodorisé', an1: 0, an2: 0, an3: 0, total: 0 },
-  { produit: 'Poudre standard', an1: 706.67, an2: 1837.35, an3: 3180.03, total: 5724.05 },
-  { produit: 'Poudre alcalinisée', an1: 2869.53, an2: 5739.05, an3: 8608.58, total: 17217.16 }
+  { produit: 'Poudre standard', an1: 353, an2: 919, an3: 2120, total: 3392 },
+  { produit: 'Poudre alcalinisée', an1: 1435, an2: 2870, an3: 5739, total: 10044 }
 ];
 
 // Revenue and margin data
 export const caMargesData: CaMargeData[] = [
   { 
     annee: 'An 1', 
-    volume: 5899.89, 
-    ca: 54.16, 
-    margeForward: 1.07, 
-    margeFutures: 0.71,
-    margeTotal: 1.78,
+    volume: 2950, 
+    ca: 27.08, 
+    margeForward: 0.534, 
+    margeFutures: 0.354,
+    margeTotal: 0.888,
     margePct: 3.28
   },
   { 
     annee: 'An 2', 
-    volume: 13617.99, 
-    ca: 132.57, 
-    margeForward: 2.62, 
-    margeFutures: 1.63,
-    margeTotal: 4.25,
+    volume: 6809, 
+    ca: 66.29, 
+    margeForward: 1.309, 
+    margeFutures: 0.817,
+    margeTotal: 2.126,
     margePct: 3.21
   },
   { 
     annee: 'An 3', 
-    volume: 22245.21, 
-    ca: 227.58, 
-    margeForward: 4.41, 
-    margeFutures: 7.14,
-    margeTotal: 11.55,
+    volume: 14830, 
+    ca: 151.72, 
+    margeForward: 2.939, 
+    margeFutures: 4.759,
+    margeTotal: 7.698,
     margePct: 5.07
   }
 ];

@@ -500,20 +500,20 @@ export class HtmlReportGenerator {
         
         <div class="recommendation-box">
             <h3 style="margin-top: 0;">Recommandation principale</h3>
-            <p><strong>Établir le bureau de trading international à PARIS avec un capital initial de 1.89M€</strong></p>
+            <p><strong>Établir le bureau de trading international à PARIS avec un capital initial de 0.95M€</strong></p>
         </div>
         
         <div class="key-metrics">
             <div class="metric-box">
-                <div class="metric-value">7.87/10</div>
+                <div class="metric-value">8.08/10</div>
                 <div class="metric-label">Score global Paris</div>
             </div>
             <div class="metric-box">
-                <div class="metric-value">+0.52M€</div>
+                <div class="metric-value">+0.12M€</div>
                 <div class="metric-label">EBITDA An 1</div>
             </div>
             <div class="metric-box">
-                <div class="metric-value">171.5%</div>
+                <div class="metric-value">543.2%</div>
                 <div class="metric-label">ROI sur 3 ans</div>
             </div>
             <div class="metric-box">
@@ -525,8 +525,8 @@ export class HtmlReportGenerator {
         <h3>Points clés de l'analyse</h3>
         <ul>
             <li><strong>12 localisations analysées</strong> selon 5 critères pondérés : Réglementation (25%), Impact Social (22%), ROI (20%), Financement DFI (18%) et Cash Management (15%)</li>
-            <li><strong>Paris obtient le meilleur score global</strong> (7.87/10) grâce à l'équilibre optimal entre tous les critères</li>
-            <li><strong>Rentabilité immédiate</strong> : EBITDA positif dès l'An 1 (+0.52M€)</li>
+            <li><strong>Paris obtient le meilleur score global</strong> (8.08/10) grâce à l'équilibre optimal entre tous les critères</li>
+            <li><strong>Rentabilité immédiate</strong> : EBITDA positif dès l'An 1 (+0.12M€)</li>
             <li><strong>Accès privilégié aux financements</strong> AFD/Proparco pour la mission d'impact social</li>
             <li><strong>Convention fiscale excellente</strong> avec la Côte d'Ivoire</li>
             <li><strong>Coûts SG&A compétitifs</strong> : 3.99M€ sur 3 ans, 4ème position</li>
@@ -575,109 +575,109 @@ export class HtmlReportGenerator {
             <td><strong>1</strong></td>
             <td><strong>Paris</strong></td>
             <td>Europe</td>
-            <td><strong>7.87</strong></td>
-            <td>+0.52M€</td>
-            <td>1.89M€</td>
+            <td><strong>8.08</strong></td>
+            <td>+0.12M€</td>
+            <td>0.95M€</td>
             <td><span class="badge badge-success">RECOMMANDÉ</span></td>
         </tr>
-        <tr style="background-color: #dcfce7;">
-            <td><strong>2</strong></td>
-            <td><strong>Genève</strong></td>
-            <td>Europe</td>
-            <td><strong>7.81</strong></td>
-            <td>-0.23M€</td>
-            <td>1.78M€</td>
-            <td><span class="badge badge-success">RECOMMANDÉ</span></td>
+        <tr style="background-color: #fef3c7;">
+            <td>2</td>
+            <td>Singapour</td>
+            <td>Asie</td>
+            <td>8.06</td>
+            <td>+0.01M€</td>
+            <td>0.81M€</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #dcfce7;">
             <td><strong>3</strong></td>
-            <td><strong>Amsterdam</strong></td>
+            <td><strong>Genève</strong></td>
             <td>Europe</td>
-            <td><strong>7.65</strong></td>
-            <td>+0.07M€</td>
-            <td>1.74M€</td>
+            <td><strong>7.86</strong></td>
+            <td>-0.09M€</td>
+            <td>0.89M€</td>
             <td><span class="badge badge-success">RECOMMANDÉ</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
             <td>4</td>
-            <td>Singapour</td>
-            <td>Asie</td>
-            <td>7.49</td>
-            <td>+0.02M€</td>
-            <td>1.61M€</td>
+            <td>Amsterdam</td>
+            <td>Europe</td>
+            <td>7.67</td>
+            <td>+0.04M€</td>
+            <td>0.87M€</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
             <td>5</td>
             <td>Chypre</td>
             <td>Europe</td>
-            <td>6.51</td>
-            <td>+0.40M€</td>
-            <td>2.38M€</td>
+            <td>7.41</td>
+            <td>+0.20M€</td>
+            <td>3.13M€</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
             <td>6</td>
-            <td>Londres</td>
+            <td>Hambourg</td>
             <td>Europe</td>
-            <td>6.72</td>
-            <td>0.00M€</td>
-            <td>2.00M€</td>
+            <td>7.32</td>
+            <td>+0.05M€</td>
+            <td>0.93M€</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
-        </tr>
-        <tr style="background-color: #fee2e2;">
-            <td>12</td>
-            <td>Maroc CFC</td>
-            <td>Zone franche</td>
-            <td>2.95</td>
-            <td>-1.12M€</td>
-            <td>1.00M€</td>
-            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
             <td>7</td>
-            <td>Hambourg</td>
+            <td>Londres</td>
             <td>Europe</td>
-            <td>6.78</td>
-            <td>+0.09M€</td>
-            <td>1.85M€</td>
+            <td>7.06</td>
+            <td>-0.34M€</td>
+            <td>1.00M€</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #fee2e2;">
             <td>8</td>
-            <td>Maurice</td>
-            <td>Offshore</td>
-            <td>5.62</td>
-            <td>0.00M€</td>
-            <td>1.20M€</td>
-            <td><span class="badge badge-danger">DÉCONSEILLÉ</span></td>
-        </tr>
-        <tr style="background-color: #fee2e2;">
-            <td>11</td>
-            <td>Tel Aviv</td>
-            <td>Moyen-Orient</td>
-            <td>3.20</td>
-            <td>-0.10M€</td>
-            <td>1.65M€</td>
-            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
-        </tr>
-        <tr style="background-color: #fee2e2;">
-            <td>10</td>
-            <td>Dubai</td>
+            <td>Maroc CFC</td>
             <td>Zone franche</td>
-            <td>3.85</td>
-            <td>0.00M€</td>
-            <td>1.70M€</td>
+            <td>6.91</td>
+            <td>+0.47M€</td>
+            <td>5.67M€</td>
             <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
         </tr>
         <tr style="background-color: #fee2e2;">
             <td>9</td>
+            <td>Tel Aviv</td>
+            <td>Moyen-Orient</td>
+            <td>6.58</td>
+            <td>-0.03M€</td>
+            <td>2.17M€</td>
+            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #fee2e2;">
+            <td>10</td>
+            <td>Maurice</td>
+            <td>Offshore</td>
+            <td>6.56</td>
+            <td>+0.41M€</td>
+            <td>3.76M€</td>
+            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
+        </tr>
+        <tr style="background-color: #fef3c7;">
+            <td>11</td>
+            <td>Dubai</td>
+            <td>Zone franche</td>
+            <td>6.50</td>
+            <td>0.00M€</td>
+            <td>2.59M€</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
+        </tr>
+        <tr style="background-color: #fee2e2;">
+            <td>12</td>
             <td>Andorre</td>
             <td>Zone franche</td>
-            <td>4.20</td>
-            <td>+0.76M€</td>
-            <td>1.15M€</td>
-            <td><span class="badge badge-danger">DÉCONSEILLÉ</span></td>
+            <td>5.23</td>
+            <td>+0.38M€</td>
+            <td>2.88M€</td>
+            <td><span class="badge badge-danger">NON RECOMMANDÉ</span></td>
         </tr>
     </table>
     
@@ -698,18 +698,18 @@ export class HtmlReportGenerator {
 
   private generateCityCards(): string {
     const cities = [
-      { name: 'Paris', score: 7.87, ebitda: 0.52, equity: 1.89, status: 'RECOMMANDÉ', color: '#dcfce7' },
-      { name: 'Genève', score: 7.81, ebitda: -0.09, equity: 1.78, status: 'RECOMMANDÉ', color: '#dcfce7' },
-      { name: 'Amsterdam', score: 7.65, ebitda: 0.07, equity: 1.74, status: 'RECOMMANDÉ', color: '#dcfce7' },
-      { name: 'Singapour', score: 7.49, ebitda: 0.02, equity: 1.61, status: 'POSSIBLE', color: '#fef3c7' },
-      { name: 'Chypre', score: 6.51, ebitda: 0.40, equity: 2.38, status: 'POSSIBLE', color: '#fef3c7' },
-      { name: 'Londres', score: 6.72, ebitda: 0.00, equity: 2.00, status: 'POSSIBLE', color: '#fef3c7' },
-      { name: 'Maroc CFC', score: 2.95, ebitda: -1.12, equity: 1.00, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
-      { name: 'Hambourg', score: 6.78, ebitda: 0.09, equity: 1.85, status: 'POSSIBLE', color: '#fef3c7' },
-      { name: 'Maurice', score: 5.62, ebitda: 0.00, equity: 1.20, status: 'DÉCONSEILLÉ', color: '#fee2e2' },
-      { name: 'Tel Aviv', score: 3.20, ebitda: -0.10, equity: 1.65, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
-      { name: 'Dubai', score: 3.85, ebitda: 0.00, equity: 1.70, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
-      { name: 'Andorre', score: 4.20, ebitda: 0.76, equity: 1.15, status: 'DÉCONSEILLÉ', color: '#fee2e2' }
+      { name: 'Paris', score: 8.08, ebitda: 0.12, equity: 0.95, status: 'RECOMMANDÉ', color: '#dcfce7' },
+      { name: 'Singapour', score: 8.06, ebitda: 0.01, equity: 0.81, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Genève', score: 7.86, ebitda: -0.09, equity: 0.89, status: 'RECOMMANDÉ', color: '#dcfce7' },
+      { name: 'Amsterdam', score: 7.67, ebitda: 0.04, equity: 0.87, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Chypre', score: 7.41, ebitda: 0.20, equity: 3.13, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Hambourg', score: 7.32, ebitda: 0.05, equity: 0.93, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Londres', score: 7.06, ebitda: -0.34, equity: 1.00, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Dubai', score: 6.50, ebitda: 0.00, equity: 2.59, status: 'POSSIBLE', color: '#fef3c7' },
+      { name: 'Maurice', score: 6.26, ebitda: 0.41, equity: 3.76, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
+      { name: 'Tel Aviv', score: 6.18, ebitda: -0.03, equity: 2.17, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
+      { name: 'Maroc CFC', score: 6.01, ebitda: 0.47, equity: 5.67, status: 'NON RECOMMANDÉ', color: '#fee2e2' },
+      { name: 'Andorre', score: 5.23, ebitda: 0.38, equity: 2.88, status: 'NON RECOMMANDÉ', color: '#fee2e2' }
     ];
 
     return cities.map((city, index) => `
@@ -770,8 +770,8 @@ export class HtmlReportGenerator {
         </tr>
         <tr>
             <td>Certification</td>
-            <td>FSSC 22000 V.5</td>
-            <td>Obtenue en 2021</td>
+            <td>FSSC 22000 V.6</td>
+            <td>Obtenue en 2024</td>
         </tr>
         <tr>
             <td>Localisation</td>
@@ -1129,17 +1129,17 @@ export class HtmlReportGenerator {
         </tr>
         <tr>
             <td><strong>Volume total (tonnes)</strong></td>
-            <td>6,490</td>
-            <td>13,618</td>
-            <td>22,245</td>
-            <td>42,353</td>
+            <td>3,245</td>
+            <td>6,809</td>
+            <td>11,122</td>
+            <td>21,176</td>
         </tr>
         <tr>
             <td><strong>CA (M€)</strong></td>
-            <td>54.18</td>
-            <td>132.57</td>
-            <td>227.58</td>
-            <td>414.33</td>
+            <td>27.08</td>
+            <td>66.29</td>
+            <td>151.72</td>
+            <td>245.09</td>
         </tr>
         <tr>
             <td><strong>Marge brute (M€)</strong></td>
@@ -1414,11 +1414,11 @@ export class HtmlReportGenerator {
         <tr style="background-color: #dcfce7;">
             <td>1</td>
             <td><strong>Paris</strong></td>
-            <td><strong>+0.52</strong></td>
-            <td>2.84</td>
-            <td>9.93</td>
+            <td><strong>+0.12</strong></td>
+            <td>1.40</td>
+            <td>6.81</td>
             <td>5.14</td>
-            <td><strong>171.5%</strong></td>
+            <td><strong>543.2%</strong></td>
         </tr>
         <tr>
             <td>2</td>
@@ -1528,8 +1528,8 @@ export class HtmlReportGenerator {
                 <li>Maroc CFC : +0.93 M€</li>
                 <li>Maurice : +0.82 M€</li>
                 <li>Andorre : +0.76 M€</li>
-                <li><strong>Paris : +0.52 M€</strong></li>
                 <li>Chypre : +0.40 M€</li>
+                <li><strong>Paris : +0.12 M€</strong></li>
                 <li>Hambourg : +0.09 M€</li>
             </ol>
         </div>
@@ -1537,12 +1537,12 @@ export class HtmlReportGenerator {
         <div class="metric-box">
             <h4>Classement ROI 3 ans</h4>
             <ol>
+                <li><strong>Paris : 543.2%</strong></li>
                 <li>Chypre : 248.8%</li>
                 <li>Andorre : 242.4%</li>
                 <li>Singapour : 200.0%</li>
                 <li>Genève : 187.4%</li>
                 <li>Maurice : 181.9%</li>
-                <li><strong>Paris : 171.5%</strong></li>
             </ol>
         </div>
     </div>
@@ -1550,8 +1550,8 @@ export class HtmlReportGenerator {
     <div class="highlight-box">
         <h4>Analyse de la rentabilité - Pourquoi Paris ?</h4>
         <ul>
-            <li><strong>Rentabilité immédiate</strong> : 4ème meilleur EBITDA An1 (+0.52M€), critère essentiel pour le lancement</li>
-            <li><strong>ROI solide</strong> : 171.5% sur 3 ans, dans le top 6 des localisations</li>
+            <li><strong>Rentabilité immédiate</strong> : 4ème meilleur EBITDA An1 (+0.12M€), critère essentiel pour le lancement</li>
+            <li><strong>ROI solide</strong> : 543.2% sur 3 ans, dans le top 6 des localisations</li>
             <li><strong>Stabilité</strong> : Pas de déficit en An1 contrairement à Genève (-0.23M€) et Londres (-0.67M€)</li>
             <li><strong>Équilibre</strong> : Performance financière acceptable combinée aux meilleurs scores Impact Social et DFI</li>
             <li><strong>Risque maîtrisé</strong> : Évite les juridictions offshore à fort risque réputationnel</li>
@@ -1648,42 +1648,42 @@ export class HtmlReportGenerator {
         </tr>
         <tr style="background-color: #dcfce7;">
             <td><strong>Paris</strong></td>
-            <td><strong>1.89 M€</strong></td>
-            <td>8.52 M€</td>
-            <td>5.20 M€</td>
-            <td><strong>13.73 M€</strong></td>
+            <td><strong>0.95 M€</strong></td>
+            <td>4.26 M€</td>
+            <td>2.60 M€</td>
+            <td><strong>6.87 M€</strong></td>
             <td>6.25x</td>
         </tr>
         <tr>
             <td>Genève</td>
-            <td>1.78 M€</td>
-            <td>7.44 M€</td>
-            <td>5.20 M€</td>
-            <td>12.64 M€</td>
+            <td>0.89 M€</td>
+            <td>3.72 M€</td>
+            <td>2.60 M€</td>
+            <td>6.32 M€</td>
             <td>6.08x</td>
         </tr>
         <tr>
             <td>Amsterdam</td>
-            <td>1.74 M€</td>
-            <td>7.26 M€</td>
-            <td>5.07 M€</td>
-            <td>12.33 M€</td>
+            <td>0.87 M€</td>
+            <td>3.63 M€</td>
+            <td>2.54 M€</td>
+            <td>6.17 M€</td>
             <td>6.09x</td>
         </tr>
         <tr>
             <td>Londres</td>
-            <td>2.00 M€</td>
-            <td>6.70 M€</td>
-            <td>4.98 M€</td>
-            <td>11.67 M€</td>
+            <td>1.00 M€</td>
+            <td>3.35 M€</td>
+            <td>2.49 M€</td>
+            <td>5.84 M€</td>
             <td>4.84x</td>
         </tr>
         <tr>
             <td>Singapour</td>
-            <td>1.61 M€</td>
-            <td>6.15 M€</td>
-            <td>4.98 M€</td>
-            <td>11.12 M€</td>
+            <td>0.81 M€</td>
+            <td>3.08 M€</td>
+            <td>2.49 M€</td>
+            <td>5.56 M€</td>
             <td>5.91x</td>
         </tr>
     </table>
@@ -1872,14 +1872,14 @@ export class HtmlReportGenerator {
             </tr>
             <tr>
                 <td>Emplois directs CI</td>
-                <td>15-20</td>
-                <td>35-40</td>
+                <td>8-10</td>
+                <td>18-20</td>
                 <td>Formation internationale</td>
             </tr>
             <tr>
                 <td>Jeunes formés/an</td>
-                <td>20</td>
-                <td>50+</td>
+                <td>10</td>
+                <td>25</td>
                 <td>Stages et alternance</td>
             </tr>
             <tr>
@@ -1896,8 +1896,8 @@ export class HtmlReportGenerator {
             </tr>
             <tr>
                 <td>Investissement local</td>
-                <td>2M€</td>
-                <td>5M€</td>
+                <td>1M€</td>
+                <td>2.5M€</td>
                 <td>Infrastructure & formation</td>
             </tr>
         </table>
@@ -1974,43 +1974,43 @@ export class HtmlReportGenerator {
             <td>5.46</td>
             <td>10.00</td>
             <td>6.66</td>
-            <td><strong>7.87</strong></td>
+            <td><strong>8.08</strong></td>
             <td><span class="badge badge-success">RECOMMANDÉ</span></td>
         </tr>
-        <tr style="background-color: #dcfce7;">
+        <tr style="background-color: #fef3c7;">
             <td>2</td>
-            <td>Genève</td>
-            <td>GO</td>
+            <td>Singapour</td>
+            <td>POSSIBLE</td>
+            <td>8.00</td>
+            <td>6.10</td>
             <td>10.00</td>
-            <td>7.90</td>
-            <td>5.92</td>
-            <td>10.00</td>
-            <td>6.85</td>
-            <td>7.81</td>
-            <td><span class="badge badge-success">RECOMMANDÉ</span></td>
+            <td>8.00</td>
+            <td>9.10</td>
+            <td>8.06</td>
+            <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #dcfce7;">
             <td>3</td>
-            <td>Amsterdam</td>
-            <td>GO</td>
+            <td>Genève</td>
+            <td>RECOMMANDÉ</td>
             <td>10.00</td>
-            <td>7.75</td>
-            <td>5.61</td>
-            <td>9.00</td>
-            <td>6.93</td>
-            <td>7.65</td>
+            <td>7.90</td>
+            <td>7.70</td>
+            <td>10.00</td>
+            <td>6.10</td>
+            <td>7.86</td>
             <td><span class="badge badge-success">RECOMMANDÉ</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
             <td>4</td>
-            <td>Singapour</td>
-            <td>GO</td>
-            <td>8.00</td>
-            <td>6.15</td>
+            <td>Amsterdam</td>
+            <td>POSSIBLE</td>
             <td>10.00</td>
-            <td>8.00</td>
-            <td>7.16</td>
-            <td>7.49</td>
+            <td>7.80</td>
+            <td>7.50</td>
+            <td>9.00</td>
+            <td>6.30</td>
+            <td>7.67</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
@@ -2019,10 +2019,10 @@ export class HtmlReportGenerator {
             <td>POSSIBLE</td>
             <td>8.00</td>
             <td>6.30</td>
-            <td>4.95</td>
+            <td>9.20</td>
             <td>9.00</td>
-            <td>5.50</td>
-            <td>6.51</td>
+            <td>6.80</td>
+            <td>7.41</td>
             <td><span class="badge badge-warning">POSSIBLE</span></td>
         </tr>
         <tr style="background-color: #fef3c7;">
@@ -2134,9 +2134,9 @@ export class HtmlReportGenerator {
         </tr>
         <tr>
             <td>Volume An1 (tonnes)</td>
-            <td>6,490</td>
-            <td>6,490</td>
-            <td>6,490</td>
+            <td>3,245</td>
+            <td>3,245</td>
+            <td>3,245</td>
         </tr>
         <tr>
             <td>CA An1 (M€)</td>
@@ -2152,13 +2152,13 @@ export class HtmlReportGenerator {
         </tr>
         <tr>
             <td>EBITDA An1 (M€)</td>
-            <td><strong>+0.52</strong></td>
+            <td><strong>+0.12</strong></td>
             <td>-0.23</td>
             <td>+0.07</td>
         </tr>
         <tr>
             <td>ROI 3 ans</td>
-            <td>171.5%</td>
+            <td>543.2%</td>
             <td>187.4%</td>
             <td>176.6%</td>
         </tr>
@@ -2181,7 +2181,7 @@ export class HtmlReportGenerator {
     <div class="recommendation-box">
         <h3>Les 7 arguments décisifs pour Paris</h3>
         <ol>
-            <li><strong>Seul hub européen EBITDA+ en An1</strong> : +0.52M€ vs -0.23M€ pour Genève</li>
+            <li><strong>Seul hub européen EBITDA+ en An1</strong> : +0.12M€ vs -0.23M€ pour Genève</li>
             <li><strong>Score Impact Social exceptionnel</strong> : 8.50/10, 2ème meilleur score global</li>
             <li><strong>Accès privilégié AFD/Proparco</strong> : 10/10 pour financement DFI mission</li>
             <li><strong>Réglementation parfaite</strong> : 10/10 avec convention fiscale CI optimale</li>
@@ -2377,178 +2377,192 @@ export class HtmlReportGenerator {
     <!-- 11. NEXT STEPS -->
     <h1><span class="numero">11.</span> Next Steps - Planning d'implémentation</h1>
     
-    <h2>Phase 1 : Structuration juridique et financière (Mois 1-3)</h2>
-    
-    <table>
-        <tr>
-            <th>Activité</th>
-            <th>Délai</th>
-            <th>Responsable</th>
-            <th>Budget</th>
-        </tr>
-        <tr>
-            <td><strong>Création entité Paris</strong></td>
-            <td>M1</td>
-            <td>Conseil juridique</td>
-            <td>25K€</td>
-        </tr>
-        <tr>
-            <td>Négociation ligne de crédit</td>
-            <td>M1-M2</td>
-            <td>CFO</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Dossier financement AFD/Proparco</td>
-            <td>M2-M3</td>
-            <td>CEO + consultant</td>
-            <td>50K€</td>
-        </tr>
-        <tr>
-            <td>Licences CCC Côte d'Ivoire</td>
-            <td>M2-M3</td>
-            <td>Équipe locale CI</td>
-            <td>15K€</td>
-        </tr>
-        <tr>
-            <td>Assurances et garanties</td>
-            <td>M3</td>
-            <td>Risk Manager</td>
-            <td>120K€/an</td>
-        </tr>
-    </table>
-    
-    <h2>Phase 2 : Setup opérationnel (Mois 3-6)</h2>
-    
-    <table>
-        <tr>
-            <th>Activité</th>
-            <th>Délai</th>
-            <th>Responsable</th>
-            <th>Budget</th>
-        </tr>
-        <tr>
-            <td><strong>Recrutement équipe Paris</strong></td>
-            <td>M3-M5</td>
-            <td>Head Hunter</td>
-            <td>80K€</td>
-        </tr>
-        <tr>
-            <td>Location et aménagement bureaux</td>
-            <td>M4-M5</td>
-            <td>Facility Manager</td>
-            <td>200K€</td>
-        </tr>
-        <tr>
-            <td>Systèmes IT et trading</td>
-            <td>M4-M6</td>
-            <td>CTO</td>
-            <td>300K€</td>
-        </tr>
-        <tr>
-            <td>Ouverture comptes brokers</td>
-            <td>M5</td>
-            <td>Head of Trading</td>
-            <td>500K€ dépôt</td>
-        </tr>
-        <tr>
-            <td>Formation équipe et procédures</td>
-            <td>M5-M6</td>
-            <td>Consultant spécialisé</td>
-            <td>40K€</td>
-        </tr>
-    </table>
-    
-    <h2>Phase 3 : Lancement commercial (Mois 6-9)</h2>
-    
-    <table>
-        <tr>
-            <th>Activité</th>
-            <th>Délai</th>
-            <th>Responsable</th>
-            <th>Objectif</th>
-        </tr>
-        <tr>
-            <td><strong>1ers contrats forward CCC</strong></td>
-            <td>M6-M7</td>
-            <td>Head of Trading</td>
-            <td>1,000 tonnes</td>
-        </tr>
-        <tr>
-            <td>Premiers hedges ICE Futures</td>
-            <td>M7</td>
-            <td>Traders</td>
-            <td>500 tonnes</td>
-        </tr>
-        <tr>
-            <td>Partenariats commerciaux UE</td>
-            <td>M7-M9</td>
-            <td>Business Development</td>
-            <td>5 clients</td>
-        </tr>
-        <tr>
-            <td>Programme formation jeunes CI</td>
-            <td>M8</td>
-            <td>HR + Impact Manager</td>
-            <td>10 stagiaires</td>
-        </tr>
-        <tr>
-            <td>Communication impact social</td>
-            <td>M8-M9</td>
-            <td>Marketing</td>
-            <td>Rapport An1</td>
-        </tr>
-    </table>
-    
-    <h2>Budget total setup</h2>
-    
-    <div class="key-metrics">
-        <div class="metric-box">
-            <div class="metric-value">1.33M€</div>
-            <div class="metric-label">Coûts de setup</div>
+    <div class="phase-container">
+        <h2 style="background-color: #dcfce7; padding: 15px; border-left: 5px solid #10b981;">Phase 1 - Fondation Légale & Réglementaire</h2>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+            <p><strong>Fin Août 2025</strong></p>
+            <p><strong>Direction de Neskao</strong></p>
+            <p><em>À discuter avec Mereya</em></p>
         </div>
-        <div class="metric-box">
-            <div class="metric-value">1.89M€</div>
-            <div class="metric-label">Capital initial</div>
+        
+        <h3>Activités Principales</h3>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Choix de la localisation</strong></h4>
+            <p>Validation finale de Paris comme localisation optimale et formalisation de la décision</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Décision Board validée</li>
+                <li>Due diligence réglementaire complète</li>
+            </ul>
         </div>
-        <div class="metric-box">
-            <div class="metric-value">12M€</div>
-            <div class="metric-label">Lignes de crédit</div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Création de la Société</strong></h4>
+            <p>Constitution juridique de la société trading avec statuts et structure de gouvernance</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Statuts déposés</li>
+                <li>Immatriculation effectuée</li>
+                <li>Comptes bancaires ouverts</li>
+            </ul>
         </div>
-        <div class="metric-box">
-            <div class="metric-value">15.22M€</div>
-            <div class="metric-label">Total financement</div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Dépôt dossier CCC</strong></h4>
+            <p>Soumission du dossier de Contrepartie Internationale auprès du Conseil du Café-Cacao</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Dossier CCC complet</li>
+                <li>Agrément obtenu</li>
+                <li>Licence trading validée</li>
+            </ul>
+        </div>
+        
+        <div class="warning-box" style="background-color: #fef2f2; border-left: 5px solid #ef4444; padding: 15px; margin: 20px 0;">
+            <h4>⚠️ Risques Identifiés</h4>
+            <ul>
+                <li>Délais administratifs</li>
+                <li>Complexité réglementaire</li>
+            </ul>
+        </div>
+        
+        <div class="milestone-box" style="background-color: #ddd6fe; border-left: 5px solid #8b5cf6; padding: 15px; margin: 20px 0;">
+            <h4>🎯 Jalon Critique</h4>
+            <p><strong>31 Août 2025</strong></p>
+            <p>Toutes les activités doivent être finalisées avant cette date</p>
         </div>
     </div>
     
-    <h2>Conditions de succès</h2>
-    
-    <div class="success-box">
-        <h4>KPIs de réussite An 1</h4>
-        <ul>
-            <li><strong>Volume</strong> : 6,490 tonnes tradées</li>
-            <li><strong>Rentabilité</strong> : EBITDA positif (+0.52M€)</li>
-            <li><strong>Impact social</strong> : 20 jeunes CI formés</li>
-            <li><strong>Compliance</strong> : 0 incident réglementaire</li>
-            <li><strong>Clients</strong> : 5 contreparties actives</li>
-        </ul>
+    <div class="phase-container" style="margin-top: 40px;">
+        <h2 style="background-color: #fef3c7; padding: 15px; border-left: 5px solid #f59e0b;">Phase 2 - Structuration Financière & Partenariats</h2>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+            <p><strong>Septembre - Novembre 2025</strong></p>
+            <p><strong>Julien Consultant</strong></p>
+            <p><em>À discuter avec Mereya</em></p>
+        </div>
+        
+        <h3>Activités Principales</h3>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Pitch Neskao Trading</strong></h4>
+            <p>Création d'un pitch investisseurs professionnel présentant l'opportunité trading</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Deck investisseur finalisé</li>
+                <li>Modèle financier 3 ans</li>
+                <li>Proposition de valeur</li>
+            </ul>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Business Plan & Budget 2026</strong></h4>
+            <p>Élaboration détaillée du business plan et budgets prévisionnels jusqu'en 2026</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Business plan complet</li>
+                <li>Budgets détaillés</li>
+                <li>Projections cash-flow</li>
+            </ul>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Levée de fonds</strong></h4>
+            <p>Rencontres avec banques, DFIs et investisseurs pour validation des financements</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Term sheets signées</li>
+                <li>Financements confirmés</li>
+                <li>Partenariats DFI actifs</li>
+            </ul>
+        </div>
+        
+        <div class="warning-box" style="background-color: #fef2f2; border-left: 5px solid #ef4444; padding: 15px; margin: 20px 0;">
+            <h4>⚠️ Risques Identifiés</h4>
+            <ul>
+                <li>Conditions de financement</li>
+                <li>Timing marché</li>
+            </ul>
+        </div>
+        
+        <div class="milestone-box" style="background-color: #ddd6fe; border-left: 5px solid #8b5cf6; padding: 15px; margin: 20px 0;">
+            <h4>🎯 Jalon Critique</h4>
+            <p><strong>30 Novembre 2025</strong></p>
+            <p>Toutes les activités doivent être finalisées avant cette date</p>
+        </div>
     </div>
     
-    <h2>Risques planning</h2>
-    
-    <div class="alert-box">
-        <h4>⚠️ Facteurs de retard potentiels</h4>
-        <ul>
-            <li><strong>Licences CCC</strong> : Bureaucratie ivoirienne (+1-2 mois)</li>
-            <li><strong>Financement DFI</strong> : Due diligence approfondie (+2-3 mois)</li>
-            <li><strong>Recrutement traders</strong> : Marché tendu Paris (+1 mois)</li>
-            <li><strong>Systèmes IT</strong> : Intégration complexe (+1 mois)</li>
-        </ul>
+    <div class="phase-container" style="margin-top: 40px;">
+        <h2 style="background-color: #e0f2fe; padding: 15px; border-left: 5px solid #0ea5e9;">Phase 3 - Déploiement Opérationnel</h2>
+        <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+            <p><strong>Octobre - Décembre 2025</strong></p>
+            <p><strong>Julien Consultant</strong></p>
+            <p><em>À discuter avec Mereya</em></p>
+        </div>
+        
+        <h3>Activités Principales</h3>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Bureaux & Infrastructure</strong></h4>
+            <p>Recherche et sécurisation des locaux parisiens avec infrastructure adaptée</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Bail signé</li>
+                <li>Aménagement terminé</li>
+                <li>Infrastructure opérationnelle</li>
+            </ul>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Recrutements clés</strong></h4>
+            <p>Lancement du processus de recrutement pour les postes critiques de l'équipe</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Trading Manager recruté</li>
+                <li>Risk Manager identifié</li>
+                <li>Équipe core constituée</li>
+            </ul>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h4><strong>Systèmes IT</strong></h4>
+            <p>Mise en place des systèmes informatiques, trading et gestion des risques</p>
+            
+            <p><strong>Délivrables:</strong></p>
+            <ul>
+                <li>Plateforme trading active</li>
+                <li>Systèmes risk opérationnels</li>
+                <li>Connectivité ICE</li>
+            </ul>
+        </div>
+        
+        <div class="warning-box" style="background-color: #fef2f2; border-left: 5px solid #ef4444; padding: 15px; margin: 20px 0;">
+            <h4>⚠️ Risques Identifiés</h4>
+            <ul>
+                <li>Délais d'installation</li>
+                <li>Disponibilité talents</li>
+            </ul>
+        </div>
+        
+        <div class="milestone-box" style="background-color: #ddd6fe; border-left: 5px solid #8b5cf6; padding: 15px; margin: 20px 0;">
+            <h4>🎯 Jalon Critique</h4>
+            <p><strong>31 Décembre 2025</strong></p>
+            <p>Toutes les activités doivent être finalisées avant cette date</p>
+        </div>
     </div>
-
+    
     <div class="page-break"></div>
     `;
   }
+
 
   private generateRecommendationsSection(): string {
     return `
@@ -2559,8 +2573,8 @@ export class HtmlReportGenerator {
     
     <div class="recommendation-box" style="text-align: center; padding: 40px;">
         <h2 style="margin-top: 0; color: #16a34a;">✓ PARIS - CHOIX OPTIMAL</h2>
-        <p style="font-size: 18pt; font-weight: bold;">Établir le bureau de trading international à Paris avec un capital initial de 1.89M€</p>
-        <p style="font-size: 14pt;">Score global : <strong>7.87/10</strong> | EBITDA An1 : <strong>+0.52M€</strong> | ROI 3 ans : <strong>171.5%</strong></p>
+        <p style="font-size: 18pt; font-weight: bold;">Établir le bureau de trading international à Paris avec un capital initial de 0.95M€</p>
+        <p style="font-size: 14pt;">Score global : <strong>8.08/10</strong> | EBITDA An1 : <strong>+0.12M€</strong> | ROI 3 ans : <strong>543.2%</strong></p>
     </div>
     
     <h2>Synthèse des arguments décisifs</h2>
@@ -2603,11 +2617,10 @@ export class HtmlReportGenerator {
     <div class="highlight-box">
         <h4>Actions prioritaires</h4>
         <ol>
-            <li><strong>Validation Conseil d'Administration</strong> Neskao (J+7)</li>
-            <li><strong>Sélection conseil juridique</strong> spécialisé trading commodités Paris (J+10)</li>
-            <li><strong>Première approche AFD/Proparco</strong> via réseau existant (J+14)</li>
-            <li><strong>Prospection banques françaises</strong> pour lignes de crédit (J+21)</li>
-            <li><strong>Lancement recherche Head of Trading</strong> via chasseurs de têtes (J+30)</li>
+            <li><strong>Validation Conseil d'Administration Neskao</strong> (Août)</li>
+            <li><strong>Sélection conseil juridique spécialisé trading commodités Paris</strong> (Août)</li>
+            <li><strong>Première approche AFD/Proparco via réseau existant</strong> (Septembre)</li>
+            <li><strong>Prospection banques françaises pour lignes de crédit</strong> (Octobre-Novembre)</li>
         </ol>
     </div>
     
@@ -2622,7 +2635,7 @@ export class HtmlReportGenerator {
         <tr>
             <td>Problème financement DFI</td>
             <td><strong>Genève</strong></td>
-            <td>Hub DFI mondial, score proche (7.81 vs 7.87)</td>
+            <td>Hub DFI mondial, score proche (7.86 vs 8.08)</td>
         </tr>
         <tr>
             <td>Coûts SG&A trop élevés</td>
@@ -2643,7 +2656,7 @@ export class HtmlReportGenerator {
         <ul>
             <li><strong>Volume</strong> : Croissance 6,490 → 22,245 tonnes (+243%)</li>
             <li><strong>CA</strong> : Développement 54M€ → 228M€ (+320%)</li>
-            <li><strong>Rentabilité</strong> : EBITDA 0.52M€ → 9.93M€ (+1,813%)</li>
+            <li><strong>Rentabilité</strong> : EBITDA 0.12M€ → 6.81M€ (+5,575%)</li>
             <li><strong>Impact social</strong> : 100+ jeunes ivoiriens formés</li>
             <li><strong>Expansion</strong> : Hub régional Europe de l'Ouest</li>
             <li><strong>Innovation</strong> : Leader blockchain traçabilité cacao</li>
@@ -2654,7 +2667,7 @@ export class HtmlReportGenerator {
     
     <div class="recommendation-box">
         <h3>Pour les actionnaires Neskao</h3>
-        <p>Le bureau de trading Paris représente l'évolution naturelle de Neskao vers les marchés internationaux. Avec un ROI de 171.5% et une rentabilité dès l'An 1, c'est un investissement sûr qui amplifie notre impact social tout en générant de la croissance rentable.</p>
+        <p>Le bureau de trading Paris représente l'évolution naturelle de Neskao vers les marchés internationaux. Avec un ROI de 543.2% et une rentabilité dès l'An 1, c'est un investissement sûr qui amplifie notre impact social tout en générant de la croissance rentable.</p>
         
         <h3>Pour les partenaires ivoiriens</h3>
         <p>Paris nous permet de maintenir et renforcer nos liens avec la Côte d'Ivoire grâce à l'écosystème AFD/Proparco et à la diaspora. C'est le choix de l'impact social maximal avec 100+ jeunes formés et 15% d'amélioration des revenus producteurs.</p>
