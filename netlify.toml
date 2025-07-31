@@ -4,6 +4,9 @@
   
   # Directory to publish
   publish = "dist"
+  
+  # Base directory (root of repo)
+  base = "."
 
 [build.environment]
   # Node.js version
